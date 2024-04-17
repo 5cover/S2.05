@@ -1,7 +1,5 @@
 # Étape 1 : recueil du besoin
 
-
-
 ## Existant
 
 ### les utilisateurs
