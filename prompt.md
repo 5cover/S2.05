@@ -1,7 +1,6 @@
 # Prompt
 
-Ceci un sujet de projet de conception et de réalisation de la future application de gestion des réservations
-d’une salle de spectacles.
+Ceci un sujet de projet de conception et de réalisation de la future application de gestion des réservations d’une salle de spectacles.
 
 2 acteurs sont identifiés :
 
@@ -14,7 +13,7 @@ Réalise un recueil du besoin en extrayant les besoins fonctionnels, les besoins
 
 Pour rappel:
 
-- le besoin fonctionnel est une fonction du système à développer, décrivant un service que le système doit offrir.
-- le besoin non fonctionnel une propriété ou qualité désirée du système.
-- un objectif est caractéristique générale dont le système doit être doté.
-- une contrainte est une restriction sur une ou plusieurs caractéristiques d’une partie du système ou de tout le système.
+- le besoin fonctionnel est une fonction du système à développer, décrivant un service que le système doit offrir. Les besoins fonctionnels doivent êtres formulés en termes de ce que fait l'utilisateur, en utilisant des verbes d'action, de manière précise et exhaustive. Les potentielles erreurs d'utilisation doivent être prises en compte. Cela signifie qu'il faudra utiliser le CRUD pour chaque objet métier (créer, consulter, modifier, supprimer), sauf contre-indication (par exemple, il est illégal de modifier une facture). Tu peux imaginer chauqe besoin fonctionnel comme une action sur l'interface utilisateur de l'application.
+- le besoin non fonctionnel une propriété ou qualité désirée du système. Il doit être précis, testable et évaluable.
+- un objectif est caractéristique générale dont le système doit être doté. Il est idéalement évaluable mais ce n'est pas requis.
+- une contrainte est une restriction sur une ou plusieurs caractéristiques d’une partie du système ou de tout le système. Chaque contrainte sera associée à un besoin fonctionnel précis.

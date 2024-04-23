@@ -1,18 +1,15 @@
 # Recueil du besoin
 
-(AI-generated, à proofread)
-
 ## Besoins fonctionnels
 
 1. Gestion des catégories et tarifs de spectateurs :
    - Définir les catégories de spectateurs (jeune, sénior, abonné, groupe, adulte).
-   - Définir les tarifs pour chaque catégorie de spectateur en fonction de la zone et de la catégorie du spectacle.
+   - Définir les tarif adultes fonction de la zone et de la catégorie de la représentation au début de chaque saison.
    - Gérer les abonnements et les réductions associées.
    - Appliquer la TVA aux tarifs.
 
 2. Gestion des spectacles et des représentations :
    - Créer, modifier, consulter et supprimer les spectacles.
-   - Définir les tarifs adultes par zone pour chaque spectacle.
    - Créer, modifier et afficher le planning des représentations.
    - Enregistrer les informations sur chaque spectacle (nom, date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
    - Trier et filtrer le planning par ordre chronologique, genre ou catégorie.
@@ -24,7 +21,7 @@
    - Envoyer une confirmation de réservation par e-mail ou SMS.
 
 4. Gestion de la disponibilité des places :
-   - Mettre à jour la disponibilité des places en temps réel.
+   - Mettre à jour la disponibilité des places.
    - Rejeter les demandes de réservation si le nombre de places disponibles est insuffisant.
 
 5. Gestion des annulations de représentations :
@@ -42,16 +39,24 @@
    - Fournir des statistiques sur les ventes de billets, le chiffre d'affaires et les représentations par artiste.
    - Filtrer et trier les rapports en fonction du nom du spectacle ou de l'artiste.
 
+todo :
+
+- CRUD des sièges
+- créer facture
+- crud zone
+- gérer le mode de paiement
+- afficher tarif
+
 ## Besoins non fonctionnels
 
 1. Convivialité :
-   - L'application doit être conviviale et facile à utiliser pour le guichetier.
+   - L'application doit être conviviale et facile à utiliser pour le guichetier. Cela signifie que chaque tâche devra prendre moins de 7 clics pour être effectuée.
 
 2. Performance :
-   - L'application doit être capable de mettre à jour la disponibilité des places en temps réel.
+   - L'application ne doit pas contenir de délai supérieur à 2 secondes sans barre de progression (limite pour l'ergonomie)
 
 3. Sécurité :
-   - L'application doit assurer la sécurité des données des clients et des spectateurs.
+   - L'application et les données doivent uniquement être accessible aux guichetier et à M. Malraux.
 
 ## Objectifs
 
@@ -64,5 +69,5 @@
 1. L'application sera utilisée par le personnel de la salle et non par les clients.
 2. Les tarifs réduits sont déductibles des tarifs adultes et ne peuvent pas être combinés entre eux.
 3. Les abonnements sont nominatifs et limités à un par personne.
-4. Les annulations de réservations sont soumises à des conditions spécifiques.
+4. Les annulations de réservations doivent être effectuées sous 7 jours inclus avant la date de la représentation.
 5. Les remboursements doivent être effectués sous 8 jours en cas d'annulation de représentation par l'artiste.
