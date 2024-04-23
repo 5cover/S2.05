@@ -17,3 +17,14 @@ Pour rappel:
 - le besoin non fonctionnel une propriété ou qualité désirée du système. Il doit être précis, testable et évaluable.
 - un objectif est caractéristique générale dont le système doit être doté. Il est idéalement évaluable mais ce n'est pas requis.
 - une contrainte est une restriction sur une ou plusieurs caractéristiques d’une partie du système ou de tout le système. Chaque contrainte sera associée à un besoin fonctionnel précis.
+
+Maintenant, rédige la note de cadrage
+
+- Pour rappel, la note de cadre est à l’attention des décideurs
+  - Pour acter ou non du lancement du projet
+- Plan type de la Note de Cadrage :
+– Description du problème/opportunité
+– But du projet
+– Enjeux du projet
+– Objectifs du projet
+– Autre éléments de réflexion : facteurs de succès, hypothèses, risques, obstacles, etc.
