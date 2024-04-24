@@ -24,7 +24,6 @@ Le but du projet est de développer une application de gestion des réservations
 * Une bonne compréhension des besoins fonctionnels et non fonctionnels du client.
 * Une bonne communication entre les différentes parties prenantes du projet.
 * Une planification réaliste du projet en termes de délais et de ressources.
-* Gérer efficacement les potentiels risques et obstacles.
 
 ### Hypothèses
 
@@ -48,4 +47,4 @@ Le projet comporte des enjeux importants en termes de respect des règles fiscal
 
 Les objectifs du projet sont clairs et les facteurs de succès, les hypothèses, les risques et les obstacles ont été identifiés.
 
-Le projet est considéré viable; il est recommanndé de le lancer en prenant en compte les points susmentionnés.
+Le projet est considéré **viable**; il est recommanndé de le lancer en prenant en compte les points susmentionnés.
