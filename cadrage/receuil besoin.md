@@ -11,11 +11,11 @@
 2. Gestion des spectacles et des représentations :
    - Créer, modifier, consulter et supprimer les spectacles.
    - Créer, modifier et afficher le planning des représentations.
-   - Enregistrer les informations sur chaque spectacle (nom, date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
+   - Enregistrer les informations sur chaque spectacle (nom, Date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
    - Trier et filtrer le planning par ordre chronologique, genre ou catégorie.
 
 3. Gestion des réservations, des clients et des spectateurs :
-   - Enregistrer les réservations avec les détails correspondants (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils attribués, numéro de facture).
+   - Enregistrer les réservations avec les détails correspondants (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils, numéro de facture).
    - Attribuer les places en fonction des choix du client et vérifier la disponibilité.
    - Gérer les paiements et les factures.
    - Envoyer une confirmation de réservation par e-mail ou SMS.
