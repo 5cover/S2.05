@@ -18,6 +18,15 @@
    - Enregistrer les réservations avec les détails correspondants (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils, numéro de facture).
    - Attribuer les places en fonction des choix du client et vérifier la disponibilité.
    - Gérer les paiements et les factures.
+=======
+   - Créer, modifier, consulter, supprimer un spectacle (nom, tarif par zone).
+   - Créer, modifier, consulter le planning des représentations (date/heure, nombre maximum de spectateurs, catégorie, durée, genre).
+   - Trier et filtrer le planning par ordre chronologique, genre ou catégorie.
+
+3. Gestion des réservations, des clients et des spectateurs :
+   - Créer, modifier, consulter une réservation (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils attribués, numéro de facture).
+   - Créer et transmettre la facture associée à un paiement de réservation.
+>>>>>>> 1a9effa34f20b356659e3d964444eac60b56ddd5
    - Envoyer une confirmation de réservation par e-mail ou SMS.
 
 4. Gestion de la disponibilité des places :
@@ -29,12 +38,12 @@
    - Rembourser les billets déjà payés en cas d'annulation.
    - Générer une liste des représentations annulées avec les détails correspondants.
 
-6. Gestion des demandes d’annulation de la part des clients :
+5. Gestion des demandes d’annulation de la part des clients :
    - Traiter les demandes d'annulation des clients en fonction des conditions d'annulation.
    - Rembourser les billets en cas d'annulation acceptée.
    - Générer une liste des annulations effectuées et acceptées avec les détails correspondants.
 
-7. Affichage de divers états et statistiques :
+6. Affichage de divers états et statistiques :
    - Générer des listes de réservations non annulées, de réservations annulées à la demande du client et de représentations annulées par l'artiste.
    - Fournir des statistiques sur les ventes de billets, le chiffre d'affaires et les représentations par artiste.
    - Filtrer et trier les rapports en fonction du nom du spectacle ou de l'artiste.
