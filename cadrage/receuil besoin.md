@@ -9,7 +9,6 @@
    - Appliquer la TVA aux tarifs.
 
 2. Gestion des spectacles et des représentations :
-<<<<<<< HEAD
    - Créer, modifier, consulter et supprimer les spectacles.
    - Créer, modifier et afficher le planning des représentations.
    - Enregistrer les informations sur chaque spectacle (nom, Date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
@@ -19,15 +18,6 @@
    - Enregistrer les réservations avec les détails correspondants (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils, numéro de facture).
    - Attribuer les places en fonction des choix du client et vérifier la disponibilité.
    - Gérer les paiements et les factures.
-=======
-   - Créer, modifier, consulter, supprimer un spectacle (nom, tarif par zone).
-   - Créer, modifier, consulter le planning des représentations (date/heure, nombre maximum de spectateurs, catégorie, durée, genre).
-   - Trier et filtrer le planning par ordre chronologique, genre ou catégorie.
-
-3. Gestion des réservations, des clients et des spectateurs :
-   - Créer, modifier, consulter une réservation (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils attribués, numéro de facture).
-   - Créer et transmettre la facture associée à un paiement de réservation.
->>>>>>> 1a9effa34f20b356659e3d964444eac60b56ddd5
    - Envoyer une confirmation de réservation par e-mail ou SMS.
 
 4. Gestion de la disponibilité des places :
