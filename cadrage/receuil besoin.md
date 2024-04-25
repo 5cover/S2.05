@@ -9,6 +9,7 @@
    - Appliquer la TVA aux tarifs.
 
 2. Gestion des spectacles et des représentations :
+<<<<<<< HEAD
    - Créer, modifier, consulter et supprimer les spectacles.
    - Créer, modifier et afficher le planning des représentations.
    - Enregistrer les informations sur chaque spectacle (nom, Date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
@@ -80,3 +81,7 @@ todo :
 3. Les abonnements sont nominatifs et limités à un par personne.
 4. Les annulations de réservations doivent être effectuées sous 7 jours inclus avant la date de la représentation.
 5. Les remboursements doivent être effectués sous 8 jours en cas d'annulation de représentation par l'artiste.
+6. Le paiement et les factures doivent respecter fiscales en vigueur.
+    1. la TVA est de 2.1%
+    2. le tarif HT est indiqué sur les facutres mais pas sur les billets (qui indiquent le prix TTC)
+7. Une demande réservation est rejetée si le nombre de places disponibles est insuffisant.
