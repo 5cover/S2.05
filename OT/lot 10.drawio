@@ -1,0 +1,164 @@
+<mxfile host="app.diagrams.net" modified="2024-05-24T12:11:30.242Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0" etag="c520bNzKFbgbBkV25UO-" version="24.4.6" type="device">
+  <diagram name="Page-1" id="gvnCMxv4LKMl_Kn4XD18">
+    <mxGraphModel dx="862" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eE4HT5SazwMohC68uN07-1" value="Le Patio" style="swimlane;startSize=20;horizontal=0;childLayout=treeLayout;horizontalTree=1;sortEdges=1;resizable=0;containerType=tree;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="300" width="610" height="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-2" value="Lot 10" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="40" y="468.76249999999993" width="100" height="74.25" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-3" value="&lt;div&gt;Lot 10.1 : &lt;br&gt;&lt;/div&gt;&lt;div&gt;Conception&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="190" y="101.49999999999997" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-4" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" parent="eE4HT5SazwMohC68uN07-1" source="eE4HT5SazwMohC68uN07-2" target="eE4HT5SazwMohC68uN07-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-5" value="Lot 10.2 : Développement" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="190" y="383.55999999999995" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-6" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" parent="eE4HT5SazwMohC68uN07-1" source="eE4HT5SazwMohC68uN07-2" target="eE4HT5SazwMohC68uN07-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-9" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" parent="eE4HT5SazwMohC68uN07-1" source="eE4HT5SazwMohC68uN07-3" target="eE4HT5SazwMohC68uN07-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="-8248.601250000002" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eE4HT5SazwMohC68uN07-10" value="Lot 10.1.1 : Diagramme UML" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="340" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-9" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="eE4HT5SazwMohC68uN07-1" source="eE4HT5SazwMohC68uN07-5" target="DOkQLfuvaBGBnNf8uYC1-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-8108.776250000002" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-20" value="Lot 10.2.1 : Classes Java" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="340" y="273.79999999999995" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-51" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="eE4HT5SazwMohC68uN07-1" source="eE4HT5SazwMohC68uN07-5" target="DOkQLfuvaBGBnNf8uYC1-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-5934.301250000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-52" value="Lot 10.2.2: IHM FXML" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="340" y="493.31999999999994" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-53" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="eE4HT5SazwMohC68uN07-1" source="DOkQLfuvaBGBnNf8uYC1-20" target="DOkQLfuvaBGBnNf8uYC1-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-5806.026250000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-54" value="Lot 10.2.1.1 : Création des catégories de spectateurs" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="490" y="260.29999999999995" width="100" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-55" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="eE4HT5SazwMohC68uN07-1" source="DOkQLfuvaBGBnNf8uYC1-52" target="DOkQLfuvaBGBnNf8uYC1-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-5801.17625" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DOkQLfuvaBGBnNf8uYC1-56" value="Lot 10.2.2.1 : Affichage de la liste des spectacles triée" style="whiteSpace=wrap;html=1;" parent="eE4HT5SazwMohC68uN07-1" vertex="1">
+          <mxGeometry x="490" y="367.29999999999995" width="100" height="69.96" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-3" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-4" source="eE4HT5SazwMohC68uN07-3" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-5193.661249999999" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-4" value="Lot 10.1.2 : Diagramme d&#39;activité" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="340" y="101.49999999999996" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-29" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-30" source="eE4HT5SazwMohC68uN07-3" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="-4795.133250000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-30" value="Lot 10.1.3 : Scene Graph IHM" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="340" y="182.99999999999991" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-31" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-32" source="eE4HT5SazwMohC68uN07-2" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="-4583.63125" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-32" value="Lot 10.3 : Tests" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="190" y="870.2749999999999" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-33" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-34" source="GMTmMfs1Tj-SOFvFLNdj-32" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="-4298.379250000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-34" value="Lot 10.3.1 : Tests Spectateurs (Java)" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="340" y="741.5199999999999" width="100" height="44.36" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-35" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-36" source="GMTmMfs1Tj-SOFvFLNdj-32" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-4069.158250000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-36" value="Lot 10.3.2 : Tests IHM (Manuels)" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="340" y="999.0299999999999" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-52" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-53" source="DOkQLfuvaBGBnNf8uYC1-52" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="-2433.3342500000003" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-53" value="Lot 10.2.2.2 : Affichage du planning des représentations" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="477.2599999999999" width="100" height="60.82" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-54" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-55" source="DOkQLfuvaBGBnNf8uYC1-52" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="-1926.099000000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-55" value="Lot 10.2.2.3 : Affichage de la liste des catégories de spectateurs" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="578.0799999999999" width="100" height="81.26" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-65" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-66" source="GMTmMfs1Tj-SOFvFLNdj-34" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="256.71099999999956" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-66" value="Lot 10.3.1.1 : Tests unitaire" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="699.3399999999999" width="100" height="44.36" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-67" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-68" source="GMTmMfs1Tj-SOFvFLNdj-34" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="229.02949999999947" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-68" value="Lot 10.3.1.2 : Tests d&#39;intégration" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="783.6999999999999" width="100" height="44.36" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-75" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-76" source="GMTmMfs1Tj-SOFvFLNdj-36" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="1155.8514999999998" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-76" value="Lot 10.3.2.1 : Test Affichage de la liste des spectacles triée" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="868.0599999999998" width="100" height="71.94" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-77" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-78" source="GMTmMfs1Tj-SOFvFLNdj-36" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1220.7424999999998" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-78" value="Lot 10.3.2.2 : Test Affichage du planning des représentations" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="979.9999999999998" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-79" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-80" source="GMTmMfs1Tj-SOFvFLNdj-36" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1250.7424999999998" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-80" value="Lot 10.3.2.3 : Test Affichage de la liste des catégories de spectateurs" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+          <mxGeometry x="490" y="1089.9999999999998" width="100" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
