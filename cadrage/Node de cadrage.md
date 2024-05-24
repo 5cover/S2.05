@@ -43,7 +43,7 @@ Le but du projet est de développer une application de gestion des réservations
 
 L'application de gestion des réservations de billets de spectacles pour la salle Le Patio à Melun vise à améliorer l'efficacité de la gestion des réservations, à améliorer l'expérience des clients et à fournir des informations précises et à jour sur les réservations, les représentations et les ventes de billets.
 
-Le projet comporte des enjeux importants en termes de respect des règles fiscales, de sécurité des données et de convivialité de l'application.
+Le projet comporte des enjeux importants en termes de respect des règles fiscales et de convivialité de l'application.
 
 Les objectifs du projet sont clairs et les facteurs de succès, les hypothèses, les risques et les obstacles ont été identifiés.
 
