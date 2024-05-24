@@ -3,20 +3,28 @@
 ## Besoins fonctionnels
 
 1. Gestion des catégories et tarifs de spectateurs :
-   - Créer, modifier, consulter les zones de la salle (nom, sièges, gamme de prix)
-   - Créer, modifier, consulter les catégories de spectateurs (nom, réduction).
+   - Définir les catégories de spectateurs (jeune, sénior, abonné, groupe, adulte).
+   - Définir les tarif adultes fonction de la zone et de la catégorie de la représentation au début de chaque saison.
+   - Gérer les abonnements et les réductions associées.
+   - Appliquer la TVA aux tarifs.
 
 2. Gestion des spectacles et des représentations :
-   - Créer, modifier, consulter, supprimer un spectacle (nom, tarif par zone).
-   - Créer, modifier, consulter le planning des représentations (date/heure, nombre maximum de spectateurs, catégorie, durée, genre).
+   - Créer, modifier, consulter et supprimer les spectacles.
+   - Créer, modifier et afficher le planning des représentations.
+   - Enregistrer les informations sur chaque spectacle (nom, Date et heure de début, nombre maximum de spectateurs, catégorie, durée, genre).
    - Trier et filtrer le planning par ordre chronologique, genre ou catégorie.
 
 3. Gestion des réservations, des clients et des spectateurs :
-   - Créer, modifier, consulter une réservation (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils attribués, numéro de facture).
-   - Créer et transmettre la facture associée à un paiement de réservation.
+   - Enregistrer les réservations avec les détails correspondants (numéro de client, date de réservation, numéro de réservation, mode de paiement, gamme de prix, fauteuils, numéro de facture).
+   - Attribuer les places en fonction des choix du client et vérifier la disponibilité.
+   - Gérer les paiements et les factures.
    - Envoyer une confirmation de réservation par e-mail ou SMS.
 
-4. Gestion des annulations de représentations :
+4. Gestion de la disponibilité des places :
+   - Mettre à jour la disponibilité des places.
+   - Rejeter les demandes de réservation si le nombre de places disponibles est insuffisant.
+
+5. Gestion des annulations de représentations :
    - Enregistrer les annulations de représentations à la demande de l'artiste.
    - Rembourser les billets déjà payés en cas d'annulation.
    - Générer une liste des représentations annulées avec les détails correspondants.
@@ -30,6 +38,14 @@
    - Générer des listes de réservations non annulées, de réservations annulées à la demande du client et de représentations annulées par l'artiste.
    - Fournir des statistiques sur les ventes de billets, le chiffre d'affaires et les représentations par artiste.
    - Filtrer et trier les rapports en fonction du nom du spectacle ou de l'artiste.
+
+todo :
+
+- CRUD des sièges
+- créer facture
+- crud zone
+- gérer le mode de paiement
+- afficher tarif
 
 ## Besoins non fonctionnels
 
