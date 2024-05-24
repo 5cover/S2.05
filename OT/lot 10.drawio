@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-24T12:11:30.242Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0" etag="c520bNzKFbgbBkV25UO-" version="24.4.6" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-24T12:17:29.847Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0" etag="IKW3PDzpbjVJZhzOjvLW" version="24.4.6" type="device">
   <diagram name="Page-1" id="gvnCMxv4LKMl_Kn4XD18">
     <mxGraphModel dx="862" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -83,7 +83,7 @@
             <mxPoint x="290" y="-4583.63125" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-32" value="Lot 10.3 : Tests" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
+        <mxCell id="GMTmMfs1Tj-SOFvFLNdj-32" value="Lot 10.3 : Recette" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
           <mxGeometry x="190" y="870.2749999999999" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GMTmMfs1Tj-SOFvFLNdj-33" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-34" source="GMTmMfs1Tj-SOFvFLNdj-32" parent="eE4HT5SazwMohC68uN07-1">
@@ -128,7 +128,7 @@
         </mxCell>
         <mxCell id="GMTmMfs1Tj-SOFvFLNdj-67" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="GMTmMfs1Tj-SOFvFLNdj-68" source="GMTmMfs1Tj-SOFvFLNdj-34" parent="eE4HT5SazwMohC68uN07-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="229.02949999999947" as="sourcePoint" />
+            <mxPoint x="560" y="229.02949999999944" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GMTmMfs1Tj-SOFvFLNdj-68" value="Lot 10.3.1.2 : Tests d&#39;intégration" style="whiteSpace=wrap;html=1;" vertex="1" parent="eE4HT5SazwMohC68uN07-1">
