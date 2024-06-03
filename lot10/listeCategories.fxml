@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="118.4000244140625" text="Nom" />
+          <TableColumn prefWidth="304.79998779296875" text="Description" />
+            <TableColumn prefWidth="75.20001220703125" text="Taux" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAjoutCategorie" mnemonicParsing="false" onAction="#ajouterCategorie" prefHeight="20.0" prefWidth="80.0" text="Ajouter">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnModifieCategorie" mnemonicParsing="false" onAction="#modifierCategorie" prefHeight="20.0" prefWidth="80.0" text="Modifier" />
+            <Button fx:id="btnSupprimerCategorie" mnemonicParsing="false" onAction="#supprimerCategorie" prefHeight="20.0" prefWidth="80.0" text="Supprimer" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>
