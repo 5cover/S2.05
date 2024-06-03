@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ListView />
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="90.0" text="Ajouter" />
+            <Button mnemonicParsing="false" prefWidth="90.0" text="Modifier" />
+            <Button mnemonicParsing="false" prefWidth="90.0" text="Supprimer" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

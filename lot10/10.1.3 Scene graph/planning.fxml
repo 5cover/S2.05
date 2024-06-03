@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TableView xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columns>
+      <TableColumn prefWidth="75.0" text="Nom" />
+      <TableColumn prefWidth="75.0" text="Date" />
+      <TableColumn prefWidth="75.0" text="Capacité" />
+      <TableColumn prefWidth="75.0" text="Durée" />
+      <TableColumn prefWidth="126.0">
+         <graphic>
+            <ComboBox prefWidth="150.0" promptText="Catégorie" />
+         </graphic>
+      </TableColumn>
+      <TableColumn minWidth="7.0" prefWidth="131.0">
+         <graphic>
+            <ComboBox prefWidth="150.0" promptText="Genre" />
+         </graphic>
+      </TableColumn>
+   </columns>
+</TableView>
