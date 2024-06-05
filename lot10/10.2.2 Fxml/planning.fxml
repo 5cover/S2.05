@@ -17,7 +17,8 @@
       <GridPane>
          <columnConstraints>
             <ColumnConstraints />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" />
+            <ColumnConstraints fillWidth="false" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -40,6 +41,11 @@
                </GridPane.margin>
             </DatePicker>
             <DatePicker minWidth="50.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label style="-fx-text-fill: red;" text="Entrez une date antérieure à la date de début" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="7.0" />
+               </GridPane.margin>
+            </Label>
          </children>
          <VBox.margin>
             <Insets bottom="10.0" />
