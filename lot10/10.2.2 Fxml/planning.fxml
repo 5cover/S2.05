@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<TableView xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <columns>
-      <TableColumn prefWidth="75.0" text="Nom" />
-      <TableColumn prefWidth="75.0" text="Date" />
-      <TableColumn prefWidth="75.0" text="Capacité" />
-      <TableColumn prefWidth="75.0" text="Durée" />
-      <TableColumn prefWidth="126.0">
-         <graphic>
-            <ComboBox prefWidth="150.0" promptText="Catégorie" />
-         </graphic>
-      </TableColumn>
-      <TableColumn minWidth="7.0" prefWidth="131.0">
-         <graphic>
-            <ComboBox prefWidth="150.0" promptText="Genre" />
-         </graphic>
-      </TableColumn>
-   </columns>
-</TableView>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="De :">
+               <GridPane.margin>
+                  <Insets right="7.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="À :" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="7.0" />
+               </GridPane.margin>
+            </Label>
+            <DatePicker minWidth="50.0" prefWidth="150.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="7.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <DatePicker minWidth="50.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <TableView>
+         <columns>
+            <TableColumn prefWidth="75.0" text="Nom" />
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Durée" />
+            <TableColumn prefWidth="75.0" text="Capacité" />
+            <TableColumn prefWidth="125.0">
+               <graphic>
+                  <ComboBox prefWidth="125.0" promptText="Catégorie" />
+               </graphic>
+            </TableColumn>
+            <TableColumn minWidth="7.0" prefWidth="125.0">
+               <graphic>
+                  <ComboBox prefWidth="125.0" promptText="Genre" />
+               </graphic>
+            </TableColumn>
+         </columns>
+      </TableView>
+   </children>
+</VBox>
