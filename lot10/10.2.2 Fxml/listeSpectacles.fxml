@@ -1,99 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <items>
-      <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="100.0">
-        <columns>
-          <TableColumn editable="false" text="Nom" />
-          <TableColumn editable="false" text="Catégorie" />
-            <TableColumn editable="false" text="Capacité" />
-            <TableColumn editable="false" text="Durée" />
-            <TableColumn editable="false" text="Genre" />
-        </columns>
-      </TableView>
-      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="100.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
+         <content>
+            <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0">
+              <columns>
+                <TableColumn editable="false" text="Nom" />
+                <TableColumn editable="false" text="Catégorie" />
+                  <TableColumn editable="false" text="Capacité" />
+                  <TableColumn editable="false" text="Durée" />
+                  <TableColumn editable="false" text="Genre" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <VBox fillWidth="false" spacing="10.0" HBox.hgrow="NEVER">
          <children>
-            <Label text="Capacité (spectateurs)" GridPane.rowIndex="1" />
-            <Label text="Durée" GridPane.rowIndex="2" />
-            <TextField editable="false" text="120" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField editable="false" text="1h54" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ComboBox prefWidth="150.0" promptText="Catégorie A" GridPane.rowIndex="3" />
-            <TextField text="{NOM}" GridPane.columnSpan="2" GridPane.valignment="CENTER" />
-            <ComboBox prefWidth="150.0" promptText="Art contemporain" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Tarifs adultes :" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-            <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="5">
-               <top>
-                  <ImageView fitHeight="97.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@img/top.png" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D height="97.0" minX="45.0" minY="9.7" width="452.0" />
-                     </viewport>
-                  </ImageView>
-               </top>
-               <bottom>
-                  <ImageView fitHeight="99.0" fitWidth="453.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@img/bottom.png" />
-                     </image>
-                  </ImageView>
-               </bottom>
-               <left>
-                  <ImageView fitHeight="313.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@img/left.png" />
-                     </image>
-                  </ImageView>
-               </left>
-               <center>
-                  <ImageView fitHeight="313.0" fitWidth="437.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@img/center.png" />
-                     </image>
-                  </ImageView>
-               </center>
-               <right>
-                  <ImageView fitHeight="311.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@img/right.png" />
-                     </image>
-                  </ImageView>
-               </right>
-            </BorderPane>
+            <TextField text="{NOM}" />
+            <HBox alignment="CENTER_LEFT" spacing="6.0">
+               <children>
+                  <Label text="Capacité :" />
+                  <TextField editable="false" minWidth="30.0" prefWidth="50.0" text="120" />
+                  <Label text="spectateurs" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="6.0">
+               <children>
+                  <Label text="Durée :" />
+                  <TextField editable="false" minWidth="50.0" prefWidth="60.0" text="1h54" />
+               </children>
+            </HBox>
+            <ComboBox maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Art contemporain" />
+            <ComboBox maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Catégorie A" />
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" />
+                  <ColumnConstraints hgrow="NEVER" />
+                  <ColumnConstraints hgrow="NEVER" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="NEVER" />
+                  <RowConstraints vgrow="NEVER" />
+                  <RowConstraints vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" prefWidth="100.0" spacing="3.0" style="-fx-border-width: 1; -fx-border-color: #CCC; -fx-background-color: #EEE;" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <children>
+                        <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Loges gauches" />
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" prefWidth="100.0" spacing="3.0" style="-fx-border-width: 1; -fx-border-color: #CCC; -fx-background-color: #EEE;" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <children>
+                        <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Balcon" />
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" prefWidth="100.0" spacing="3.0" style="-fx-border-width: 1; -fx-border-color: #CCC; -fx-background-color: #EEE;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <children>
+                        <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Orchestre" />
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" spacing="3.0" style="-fx-border-width: 1; -fx-border-color: #CCC; -fx-background-color: #EEE;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <children>
+                        <Label text="Scène" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" prefWidth="100.0" spacing="3.0" style="-fx-border-width: 1; -fx-border-color: #CCC; -fx-background-color: #EEE;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <children>
+                        <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Loges droites" />
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </GridPane>
          </children>
-      </GridPane>
-   </items>
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
-</SplitPane>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
