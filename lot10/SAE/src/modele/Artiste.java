@@ -2,7 +2,7 @@ package modele;
 
 import java.util.ArrayList;
 
-public class Artiste {
+public final class Artiste {
 	private String nom;
 	
 	private ArrayList<Spectacle> listeSpectacle;

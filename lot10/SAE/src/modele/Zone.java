@@ -3,7 +3,7 @@ package modele;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class Zone {
+public final class Zone {
 	private String nom;
 	
 	private ArrayList<HashMap<Spectacle, Float>>  tarifs;
