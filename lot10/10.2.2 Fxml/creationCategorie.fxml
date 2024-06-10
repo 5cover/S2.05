@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="286.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.CreationCategorie">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.CtrlAddCategorie">
    <center>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -38,6 +38,11 @@
                      </HBox.margin>
                   </TextField>
                   <Label text=" %" />
+                  <Label fx:id="lbErrorNumber" text="Entrer un nombre" textFill="RED">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
                </children>
                <VBox.margin>
                   <Insets />
@@ -45,6 +50,9 @@
             </HBox>
             <TextArea fx:id="taDescription" prefHeight="100.0" prefWidth="200.0" promptText="Description" />
          </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
       </VBox>
    </center>
    <bottom>
@@ -62,8 +70,11 @@
             </Button>
          </children>
          <padding>
-            <Insets top="10.0" />
+            <Insets bottom="5.0" top="10.0" />
          </padding>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
       </HBox>
    </bottom>
    <padding>
