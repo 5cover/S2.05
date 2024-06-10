@@ -8,9 +8,12 @@ public final class Main extends Application {
         System.out.println("Hello world!");
     }
     
-    
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public static void quitter() {
+    	System.exit(0);
     }
 
 }
