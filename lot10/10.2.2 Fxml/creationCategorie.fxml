@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="286.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.CtrlAddCategorie">
    <center>
       <VBox spacing="6.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" prefWidth="600.0">
                <children>
                   <Label prefWidth="90.0" text="Nom : " />
-                  <TextField>
+                  <TextField fx:id="txfldNom">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -28,12 +28,17 @@
             <HBox alignment="CENTER_LEFT" prefWidth="400.0">
                <children>
                   <Label prefWidth="90.0" text="Réduction : " />
-                  <TextField prefWidth="50.0">
+                  <TextField fx:id="txfldReduction" onKeyTyped="#reducTyped" prefWidth="35.0">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </TextField>
                   <Label text=" %" />
+                  <Label fx:id="lbErrorNumber" text="Entrer un nombre" textFill="RED">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
                </children>
                <VBox.margin>
                   <Insets />
@@ -42,7 +47,7 @@
             <HBox alignment="CENTER_LEFT" prefWidth="400.0">
                <children>
                   <Label prefWidth="90.0" text="Description : " />
-                  <TextField>
+                  <TextField fx:id="txfldDescription">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -53,25 +58,31 @@
                </VBox.margin>
             </HBox>
          </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
       </VBox>
    </center>
    <bottom>
       <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="519.0" spacing="15.0" BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <Button defaultButton="true" mnemonicParsing="false" prefWidth="80.0" text="OK">
+            <Button fx:id="btnOk" defaultButton="true" mnemonicParsing="false" onAction="#addCategorie" prefWidth="80.0" text="OK">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button cancelButton="true" mnemonicParsing="false" prefWidth="80.0" text="Annuler">
+            <Button fx:id="btnAnnuler" cancelButton="true" mnemonicParsing="false" onAction="#cancelCategorie" prefWidth="80.0" text="Annuler">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
          </children>
          <padding>
-            <Insets top="10.0" />
+            <Insets bottom="5.0" top="10.0" />
          </padding>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
       </HBox>
    </bottom>
 </BorderPane>
