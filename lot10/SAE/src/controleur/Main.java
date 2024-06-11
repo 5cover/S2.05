@@ -39,9 +39,7 @@ public final class Main extends Application {
      * @return Une nouvelle instance de la classe {@link modele.CategorieSpectateur}, ou la catégorie actuelle si l'utilisateur a annulé la création/modifcation.
      */
     public static CategorieSpectateur afficherCreationCategorie(CategorieSpectateur actuel) {
-    	if (actuel != null) {
-    		fCreationCategorie.afficher(actuel);    		
-    	}
+    	fCreationCategorie.afficher(actuel);
     	fCreationCategorie.showAndWait();
 		return fCreationCategorie.ctrl().actuel();
     }
