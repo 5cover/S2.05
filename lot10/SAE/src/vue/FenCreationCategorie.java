@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import modele.CategorieSpectateur;
 
 public class FenCreationCategorie extends Stage {
-	private controleur.CreationCategorie ctrl;
+	private controleur.CtrlCreationCategorie ctrl;
 
 	public FenCreationCategorie() throws IOException {
 		this.setTitle("Créer une catégorie");
@@ -22,7 +22,7 @@ public class FenCreationCategorie extends Stage {
 		ctrl.afficher(categorie);
 	}
 	
-	public controleur.CreationCategorie ctrl() {
+	public controleur.CtrlCreationCategorie ctrl() {
 		return ctrl;
 	}
 

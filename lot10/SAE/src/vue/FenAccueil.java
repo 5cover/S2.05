@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class FenAccueil extends Stage {
-	private controleur.Accueil ctrl;
+	private controleur.CtrlAccueil ctrl;
 
 	public FenAccueil() throws IOException {
 		this.setTitle("Gestion Le Patio");
@@ -18,7 +18,7 @@ public class FenAccueil extends Stage {
 	}
 
 	
-	public controleur.Accueil ctrl() {
+	public controleur.CtrlAccueil ctrl() {
 		return ctrl;
 	}
 
