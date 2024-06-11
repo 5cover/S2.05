@@ -4,12 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Donnees {
-	static private ObservableList<Zone> 					lesZones 	 = FXCollections.observableArrayList();
-	static private ObservableList<CategorieSpectacle> 		lescategorieSpectacle = FXCollections.observableArrayList();
-	static private ObservableList<CategorieSpectateur> 		lesCategorieSpectateur 	 = FXCollections.observableArrayList();
-	static private ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
-	static private ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
-	static private ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
+	static public ObservableList<Zone> 					lesZones 	 = FXCollections.observableArrayList();
+	static public ObservableList<CategorieSpectacle> 		lescategorieSpectacle = FXCollections.observableArrayList();
+	static public ObservableList<CategorieSpectateur> 		lesCategorieSpectateur 	 = FXCollections.observableArrayList();
+	static public ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
+	public static ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
+	static public ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
 
 	
 	static public void chargementDonnees() { 
