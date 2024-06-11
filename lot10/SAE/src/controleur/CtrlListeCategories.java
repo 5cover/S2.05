@@ -18,7 +18,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 
-public class ListeCategories {
+public class CtrlListeCategories {
 
     @FXML
     private Button btnSupprimerCategorie;
