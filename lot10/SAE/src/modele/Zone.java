@@ -43,6 +43,10 @@ public final class Zone {
 	}
 
 
+	public float tarifSpectacle(Spectacle s){
+		return tarifs.get(s);
+	}
+
 
 	public String toString() {
 		return nom;

@@ -11,6 +11,7 @@ public final class Spectacle {
 	private ArrayList<Artiste> listeArtiste;
 	private HashMap<Zone, Float>  tarifs; // Hashmap qui lie pour une ou plusieures Zones un tarif pour cette instance
 	private CategorieSpectacle categorie;
+	private ArrayList<Representation> listeRepresentations;
 
 	public Spectacle(String n, int d, int nb, String g, Artiste art, CategorieSpectacle cat) {
 		nom = n;
@@ -23,6 +24,9 @@ public final class Spectacle {
 		listeArtiste.add(art);
 		
 		tarifs = new HashMap<Zone, Float>();
+
+		listeRepresentations = new ArrayList<Representation>();
+
 	}
 
 	public void afficher(){
@@ -54,19 +58,48 @@ public final class Spectacle {
 		}
 	}
 
+	// Artiste
 	public void ajouterArtiste(Artiste a) throws IllegalArgumentException{
-		if (a!=null) {
-			listeArtiste.add(a);
+		if (a!=null && !listeArtiste.contains(a)) {
+			addArtiste(a);
+			a.addSpectacle(this);
 		}else{
 			throw new IllegalArgumentException();
 		}
 	}
-	public void retirerArtiste(Artiste a) throws IllegalArgumentException{
-		if (a!=null && listeArtiste.contains(a)) {
-			listeArtiste.remove(a);
+
+	public void addArtiste(Artiste a){
+		listeArtiste.add(a);
+	}
+	public void removeArtiste(Artiste a){
+		listeArtiste.remove(a);
+	}
+
+	// Representations
+	public void ajouterRepresentation(Representation r) throws IllegalArgumentException{
+		if (r!=null) {
+			addRepresentation(r);
+			r.addRepresente(this);
 		}else{
 			throw new IllegalArgumentException();
 		}
+	}
+
+	public void retirerRepresentation(Representation r) throws IllegalArgumentException{
+		if (r!=null && listeRepresentations.contains(r)) {
+			removeRepresentation(r);
+			r.removeRepresente(this);
+		}else{
+			throw new IllegalArgumentException();
+		}
+	}
+
+	public void addRepresentation(Representation r){
+		listeRepresentations.add(r);
+	}
+
+	public void removeRepresentation(Representation r){
+		listeRepresentations.remove(r);
 	}
 
 	// Tarifs
@@ -95,6 +128,12 @@ public final class Spectacle {
 	
 	public void removeTarif(Zone z){
 		tarifs.remove(z);
+	}
+
+	// Consulter hashmap
+
+	public float tarifZone(Zone z){
+		return tarifs.get(z);
 	}
 
 	/////Getters and setters
