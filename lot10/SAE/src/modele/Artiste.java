@@ -11,6 +11,15 @@ public final class Artiste {
 		nom = n;
 		
 		listeSpectacle = new ArrayList<Spectacle>();
+		
 		listeSpectacle.add(s);
+	}
+
+	public void afficher(){
+		System.out.println("Nom Artiste : " + nom);
+	}
+
+	public String toString() {
+		return nom;
 	}
 }
