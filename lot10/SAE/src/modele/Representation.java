@@ -19,6 +19,33 @@ public class Representation {
         System.out.println("Annulée ? " +annulee);
     }
 
+    public void ajouterRepresente(Spectacle s) throws IllegalArgumentException{
+        if (s!=null) {
+            addRepresente(s);
+            s.addRepresentation(null);
+        } else{
+			throw new IllegalArgumentException("Spectacle en entrée est null");
+        }
+        
+    }
+    public void retirerRepresente(Spectacle s) throws IllegalArgumentException{
+        if (represente == s) {
+            removeRepresente(s);
+            s.removeRepresentation(this);
+        }else{
+		    throw new IllegalArgumentException("Spectacle en entrée est incorrect");
+        }
+    }
+
+    public void removeRepresente(Spectacle s){
+        represente=null;
+    }
+    public void addRepresente(Spectacle s){
+        represente=s;
+    }
+
+
+
     // Getters and setters
     public String getHeure() {
         return heure;

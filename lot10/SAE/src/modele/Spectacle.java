@@ -11,8 +11,9 @@ public final class Spectacle {
 	private ArrayList<Artiste> listeArtiste;
 	private HashMap<Zone, Float>  tarifs; // Hashmap qui lie pour une ou plusieures Zones un tarif pour cette instance
 	private CategorieSpectacle categorie;
+	private ArrayList<Representation> listeRepresentations;
 
-	public Spectacle(String n, int d, int nb, String g, Artiste art, CategorieSpectacle cat) {
+	public Spectacle(String n, int d, int nb, String g, CategorieSpectacle cat) {
 		nom = n;
 		duree =d;
 		nbreMaxSpect = nb;
@@ -20,9 +21,11 @@ public final class Spectacle {
 		categorie = cat;
 
 		listeArtiste = new ArrayList<Artiste>();
-		listeArtiste.add(art);
 		
 		tarifs = new HashMap<Zone, Float>();
+
+		listeRepresentations = new ArrayList<Representation>();
+
 	}
 
 	public void afficher(){
@@ -50,23 +53,77 @@ public final class Spectacle {
 				System.out.println(tarifs.get(z) + "\n");
 			}
 		}else{
-			throw new IllegalStateException();
+			throw new IllegalStateException("Hashmap est vide");
 		}
 	}
 
+	// Artiste
 	public void ajouterArtiste(Artiste a) throws IllegalArgumentException{
-		if (a!=null) {
-			listeArtiste.add(a);
+		if (a!=null && !listeArtiste.contains(a)) {
+			addArtiste(a);
+			a.addSpectacle(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (a==null) {
+				throw new IllegalArgumentException("Artiste en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Artiste déja dans la liste");
+			}
 		}
 	}
+
 	public void retirerArtiste(Artiste a) throws IllegalArgumentException{
 		if (a!=null && listeArtiste.contains(a)) {
-			listeArtiste.remove(a);
+			removeArtiste(a);
+			a.removeSpectacle(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (a==null) {
+				throw new IllegalArgumentException("Artiste en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Artiste pas dans la liste");
+			}
 		}
+	}
+
+	public void addArtiste(Artiste a){
+		listeArtiste.add(a);
+	}
+	public void removeArtiste(Artiste a){
+		listeArtiste.remove(a);
+	}
+
+	// Representations
+	public void ajouterRepresentation(Representation r) throws IllegalArgumentException{
+		if (r!=null && !listeRepresentations.contains(r)) {
+			addRepresentation(r);
+			r.addRepresente(this);
+		}else{
+			if (r==null) {
+				throw new IllegalArgumentException("Représentation en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Représentation déja dans la liste");
+			}
+		}
+	}
+
+	public void retirerRepresentation(Representation r) throws IllegalArgumentException{
+		if (r!=null && listeRepresentations.contains(r)) {
+			removeRepresentation(r);
+			r.removeRepresente(this);
+		}else{
+			if (r==null) {
+				throw new IllegalArgumentException("Représentation en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Représentation n'est pas dans la liste");
+			}
+		}
+	}
+
+	public void addRepresentation(Representation r){
+		listeRepresentations.add(r);
+	}
+
+	public void removeRepresentation(Representation r){
+		listeRepresentations.remove(r);
 	}
 
 	// Tarifs
@@ -75,7 +132,11 @@ public final class Spectacle {
 			putTarif(z, f);
 			z.putTarif(this, f);
 		}else{
-			throw new IllegalArgumentException();
+			if (z==null) {
+				throw new IllegalArgumentException("Zioe en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Zone est déja dans le HashMap");
+			}
 		}
 	}
 
@@ -84,7 +145,11 @@ public final class Spectacle {
 			removeTarif(z);
 			z.removeTarif(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (z==null) {
+				throw new IllegalArgumentException("Zioe en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Zone n'est pas dans le HashMap");
+			}
 		}
 	}
 
@@ -95,6 +160,12 @@ public final class Spectacle {
 	
 	public void removeTarif(Zone z){
 		tarifs.remove(z);
+	}
+
+	// Consulter hashmap
+
+	public float tarifZone(Zone z){
+		return tarifs.get(z);
 	}
 
 	/////Getters and setters
