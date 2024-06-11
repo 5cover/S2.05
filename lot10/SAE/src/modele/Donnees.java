@@ -4,12 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Donnees {
-	static public ObservableList<Zone> 					lesZones 	 = FXCollections.observableArrayList();
-	static public ObservableList<CategorieSpectacle> 		lescategorieSpectacle = FXCollections.observableArrayList();
-	static public ObservableList<CategorieSpectateur> 		lesCategorieSpectateur 	 = FXCollections.observableArrayList();
-	static public ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
-	public static ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
-	static public ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
+	static private ObservableList<Zone> 						lesZones 	 = FXCollections.observableArrayList();
+	static private ObservableList<CategorieSpectacle> 		lescategorieSpectacle = FXCollections.observableArrayList();
+	static private ObservableList<CategorieSpectateur> 		lesCategorieSpectateur 	 = FXCollections.observableArrayList();
+	static private ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
+	private static ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
+	static private ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
 
 	
 	static public void chargementDonnees() { 
@@ -42,12 +42,12 @@ public class Donnees {
 		lesArtiste.add(new Artiste("Roland Cristal"));
 		
 //		lesSpectacle =============================================================================================================
-		lesSpectacle.add(new Spectacle("e", 120, 2_000, "chant grégorien", lesArtiste.get(0),CategorieSpectacle.B ));
-		lesSpectacle.add(new Spectacle("Les empereurs du néant", 666, 666, "Metal gothique", lesArtiste.get(3),CategorieSpectacle.A ));
-		lesSpectacle.add(new Spectacle("Les petits poisons dans l'eau", 20, 10000, "jazz", lesArtiste.get(2),CategorieSpectacle.C ));
-		lesSpectacle.add(new Spectacle("Les petits cailloux", 3, 8_000_000, "révélation", lesArtiste.get(5),CategorieSpectacle.A ));
-		lesSpectacle.add(new Spectacle("Moi lolita", 140, 20_400, "rap", lesArtiste.get(1),CategorieSpectacle.A ));
-		lesSpectacle.add(new Spectacle("Roots", 3000, 50_000_000, "Groove Metal ", lesArtiste.get(4),CategorieSpectacle.A ));
+		lesSpectacle.add(new Spectacle("e", 120, 2_000, "chant grégorien",CategorieSpectacle.B ));
+		lesSpectacle.add(new Spectacle("Les empereurs du néant", 666, 666, "Metal gothique",CategorieSpectacle.A ));
+		lesSpectacle.add(new Spectacle("Les petits poisons dans l'eau", 20, 10000, "jazz",CategorieSpectacle.C ));
+		lesSpectacle.add(new Spectacle("Les petits cailloux", 3, 8_000_000, "révélation",CategorieSpectacle.A ));
+		lesSpectacle.add(new Spectacle("Moi lolita", 140, 20_400, "rap",CategorieSpectacle.A ));
+		lesSpectacle.add(new Spectacle("Roots", 3000, 50_000_000, "Groove Metal ",CategorieSpectacle.A ));
 		
 //		lesRepresentattion =======================================================================================================
 		lesRepresentattion.add(new Representation("16/06/2024", "08:00",lesSpectacle.get(0)));
@@ -60,7 +60,46 @@ public class Donnees {
 		lesRepresentattion.add(new Representation("27/03/2024", "15:15",lesSpectacle.get(5)));
 		
 		
+		
+		
+		}
+/////Getters and setters
+	public static ObservableList<Zone> getLesZones() {
+		return lesZones;
 	}
+	public static ObservableList<CategorieSpectacle> getLescategorieSpectacle() {
+		return lescategorieSpectacle;
+	}
+	public static ObservableList<CategorieSpectateur> getLesCategorieSpectateur() {
+		return lesCategorieSpectateur;
+	}
+	public static ObservableList<Artiste> getLesArtiste() {
+		return lesArtiste;
+	}
+	public static ObservableList<Spectacle> getLesSpectacle() {
+		return lesSpectacle;
+	}
+	public static ObservableList<Representation> getLesRepresentattion() {
+		return lesRepresentattion;
+	}
+	
+	
+	
+	
+	public static Zone getTarifsZoneBalcon() {
+		return lesZones.get(0);
+	}
+	public static Zone getTarifsZoneOcherstre() {
+		return lesZones.get(1);
+	}
+	public static Zone getTarifsZoneDroite() {
+		return lesZones.get(2);
+	}
+	public static Zone getTarifsZoneGauche() {
+		return lesZones.get(3);
+	}
+	
+	
 	
 	static public ObservableList<CategorieSpectateur> getlesCategorieSpectateur() {
 		return lesCategorieSpectateur;
