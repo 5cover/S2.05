@@ -74,16 +74,6 @@ public class ListeCategories {
     void initialize() {
         lstCategorie.addAll(modele.CategorieSpectateur.getListDeBase());
 
-        TableColumn<CategorieSpectateur,Integer> colonne1 = new TableColumn<CategorieSpectateur,Integer>("Nom");
-		colonne1.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur,Integer>("nom"));	
-		tvListeCategorie.getColumns().set(0, colonne1);
-		TableColumn<CategorieSpectateur, String> colonne2 = new TableColumn<CategorieSpectateur,String>("Description");
-		colonne2.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("description"));
-		tvListeCategorie.getColumns().set(1, colonne2);
-		TableColumn<CategorieSpectateur, String> colonne3 = new TableColumn<CategorieSpectateur,String>("Taux");
-		colonne3.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("taux"));
-		tvListeCategorie.getColumns().set(2, colonne3);
-
         tvListeCategorie.setItems(lstCategorie);
 
         BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
