@@ -6,18 +6,22 @@ import javafx.application.Application;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.CategorieSpectateur;
-import vue.FenCreationCategorie;
+import vue.*;
 
 public final class Main extends Application {
 	private static FenCreationCategorie fCreationCategorie;
-	
+	private static FenAccueil fAccueil;
 	
     public void start(Stage stage) throws IOException {
+    	fAccueil = new FenAccueil();
+    	
     	fCreationCategorie = new FenCreationCategorie();
     	fCreationCategorie.initModality(Modality.APPLICATION_MODAL);
     	
     	// test
-    	System.out.println(afficherCreationCategorie(new CategorieSpectateur("Mafieux", "Les \"amis\" de Mr. Malraux", .99)));
+    	//System.out.println(afficherCreationCategorie(new CategorieSpectateur("Mafieux", "Les \"amis\" de Mr. Malraux", .99)));
+    	
+    	fAccueil.show();
         
     }
     
