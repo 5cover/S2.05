@@ -7,11 +7,10 @@ public final class Artiste {
 	
 	private ArrayList<Spectacle> listeSpectacle;
 	
-	public Artiste(String n, Spectacle s) {
+	public Artiste(String n) {
 		nom = n;
 		
 		listeSpectacle = new ArrayList<Spectacle>();
-		listeSpectacle.add(s);
 	}
 
 	public void afficher(){
@@ -27,7 +26,11 @@ public final class Artiste {
 			addSpectacle(s);
 			s.addArtiste(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (s==null) {
+				throw new IllegalArgumentException("Spectacle en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Spectacle est déja dans la liste");
+			}
 		}
 	}
 
@@ -36,7 +39,11 @@ public final class Artiste {
 			removeSpectacle(s);
 			s.removeArtiste(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (s==null) {
+				throw new IllegalArgumentException("Spectacle en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Spectacle n'est pas dans la liste");
+			}
 		}
 	}
 

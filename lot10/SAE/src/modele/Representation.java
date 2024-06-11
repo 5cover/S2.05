@@ -24,7 +24,7 @@ public class Representation {
             addRepresente(s);
             s.addRepresentation(null);
         } else{
-            throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Spectacle en entrée est null");
         }
         
     }
@@ -33,7 +33,7 @@ public class Representation {
             removeRepresente(s);
             s.removeRepresentation(this);
         }else{
-            throw new IllegalArgumentException();
+		    throw new IllegalArgumentException("Spectacle en entrée est incorrect");
         }
     }
 

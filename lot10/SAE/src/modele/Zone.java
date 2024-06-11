@@ -13,23 +13,30 @@ public final class Zone {
 		tarifs = new HashMap<Spectacle, Float>();
 	}
 
+	// Tarifs
 	public void ajouterTarif(Spectacle s, Float f)throws IllegalArgumentException{
 		if (!tarifs.containsKey(s)&&(s != null)) {
 			putTarif(s, f);
 			s.putTarif(this, f);
 		}else{
-			throw new IllegalArgumentException();
+			if (s==null) {
+				throw new IllegalArgumentException("Spectacle en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Spectacle est déja dans le HashMap");
+			}
 		}
 	}
-
-
-	// Tarifs
+	
 	public void retirerTarif(Spectacle s) throws IllegalArgumentException{
 		if (tarifs.containsKey(s)&&(s != null)) {
 			removeTarif(s);
 			s.removeTarif(this);
 		}else{
-			throw new IllegalArgumentException();
+			if (s==null) {
+				throw new IllegalArgumentException("Spectacle en entrée est null");
+			}else{
+				throw new IllegalArgumentException("Spectacle n'est pas dans le HashMap");
+			}
 		}
 	}
 	
@@ -46,6 +53,7 @@ public final class Zone {
 	public float tarifSpectacle(Spectacle s){
 		return tarifs.get(s);
 	}
+
 
 
 	public String toString() {
