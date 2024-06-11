@@ -9,7 +9,7 @@ public class Representation {
     public Representation(String j, String h, Spectacle r){
         jour = j;
         heure = h;
-        represente = r;
+        ajouterRepresente(r);
         annulee = false;
     }
 
