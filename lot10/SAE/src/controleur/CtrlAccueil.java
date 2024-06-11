@@ -3,7 +3,7 @@ package controleur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class Accueil {
+public class CtrlAccueil {
 
     @FXML
     void quitter(ActionEvent event) {
