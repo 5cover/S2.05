@@ -3,6 +3,9 @@ package modele;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Une catégorie de spectateurs.
+ */
 public final record CategorieSpectateur( 
     String nom,
     String description,
