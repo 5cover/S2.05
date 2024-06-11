@@ -9,9 +9,7 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import modele.CategorieSpectateur;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -66,7 +64,7 @@ public class CtrlListeCategories {
 		    	alert.setTitle("Confirmation de suppression");
 		    	alert.showAndWait();
                 if (alert.getResult() == ButtonType.YES) {
-                	lstCategorie.remove(tvListeCategorie.getSelectionModel().getSelectedItem());
+                	Main.supprimerCategorie(tvListeCategorie.getSelectionModel().getSelectedItem());
 		    	}
     }
 

@@ -44,6 +44,18 @@ public final class Main extends Application {
 		return fCreationCategorie.ctrl().actuel();
     }
     
+	public static void ajouterCategorie(CategorieSpectateur actuel) {
+	    	
+	}
+	
+	public static void modifierCategorie(CategorieSpectateur actuel) {
+		
+	}
+    
+    public static void supprimerCategorie(CategorieSpectateur actuel) {
+    	
+    }
+    
     public static void fermerCreationCategorie() {
     	fCreationCategorie.close();
     }
