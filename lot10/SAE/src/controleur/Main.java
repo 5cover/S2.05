@@ -49,5 +49,4 @@ public final class Main extends Application {
     public static void fermerCreationCategorie() {
     	fCreationCategorie.close();
     }
-
 }

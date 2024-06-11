@@ -22,4 +22,8 @@ public final record CategorieSpectateur(
 		new CategorieSpectateur("Abonné", "Personne qui assiste à au moins 3 spectacles par an", .3),
 		new CategorieSpectateur("Groupe", "Personne membre d'un groupe d'au moins 20 adultes", .15),
 		new CategorieSpectateur("Adulte", "Personne n'appartenant à aucune autre catégorie", 0)));
+	
+	public static List<CategorieSpectateur> getListDeBase() {
+		return CATEGORIES_DE_BASE;
+	}
 }
