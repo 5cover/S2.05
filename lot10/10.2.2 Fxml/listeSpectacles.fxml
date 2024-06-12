@@ -23,11 +23,11 @@
          <content>
             <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0">
               <columns>
-                <TableColumn editable="false" text="Nom" />
-                <TableColumn editable="false" text="Catégorie" />
-                  <TableColumn editable="false" text="Capacité" />
-                  <TableColumn editable="false" text="Durée" />
-                  <TableColumn editable="false" text="Genre" />
+                <TableColumn fx:id="txt_colonneNom" editable="false" text="Nom" />
+                <TableColumn fx:id="txt_colonneCategorie" editable="false" text="Catégorie" />
+                  <TableColumn fx:id="txt_colonneCapacite" editable="false" text="Capacité" />
+                  <TableColumn fx:id="txt_colonneDuree" editable="false" text="Durée" />
+                  <TableColumn fx:id="txt_colonneGenre" editable="false" text="Genre" />
               </columns>
             </TableView>
          </content>
