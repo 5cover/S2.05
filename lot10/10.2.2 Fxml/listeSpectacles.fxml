@@ -104,7 +104,7 @@
                         <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Orchestre" />
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="num_prixOrchestre" />
+                              <TextField fx:id="num_prixOrchestre" editable="false" maxWidth="-Infinity" prefWidth="100.0" />
                               <Label prefHeight="25.0" text="€" />
                            </children>
                         </HBox>
