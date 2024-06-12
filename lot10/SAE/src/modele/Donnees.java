@@ -1,5 +1,8 @@
 package modele;
 
+import java.util.HashSet;
+import java.util.stream.Stream;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,7 +13,6 @@ public class Donnees {
 	static private ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
 	private static ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
 	static private ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
-
 	
 	static { 
 		
@@ -83,7 +85,9 @@ public class Donnees {
 		return lesRepresentattion;
 	}
 	
-	
+	public static HashSet<String> getGenres() {
+		return new HashSet<String>(lesSpectacle.stream().map((s) -> s.getGenre()).toList());
+	}
 	
 	
 	public static Zone getTarifsZoneBalcon() {

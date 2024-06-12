@@ -24,7 +24,7 @@
          <children>
             <Label minWidth="30.0" text="À :" />
             <DatePicker fx:id="dpA" minWidth="50.0" prefWidth="150.0" />
-            <Label fx:id="lErreurDate" style="-fx-text-fill: red;" text="Entrez une date antérieure à la date de début" />
+            <Label fx:id="lErreurDate" style="-fx-text-fill: red;" text="Entrez une date postérieure à la date de début" />
          </children>
       </HBox>
       <ScrollPane fitToHeight="true" fitToWidth="true">
