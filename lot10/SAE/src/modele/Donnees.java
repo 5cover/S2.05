@@ -33,7 +33,7 @@ public class Donnees {
 		lesCategorieSpectateur.add(new CategorieSpectateur("Sénior", "Perosnne de plus de 65 ans", .25));
 		lesCategorieSpectateur.add(new CategorieSpectateur("Abonné", "Personne qui assiste à au moins 3 spectacles par an", .3));
 		lesCategorieSpectateur.add(new CategorieSpectateur("Groupe", "Personne membre d'un groupe d'au moins 20 adultes", .15));
-		lesCategorieSpectateur.add(new CategorieSpectateur("Adulte", "Personne n'appartenant à aucune autre catégorie", 0));
+		lesCategorieSpectateur.add(new CategorieSpectateur("Adulte", "Personne n'appartenant à aucune autre catégorie", 0d));
 		
 //		lesArtiste ===============================================================================================================
 		lesArtiste.add(new Artiste("repar-auto"));
