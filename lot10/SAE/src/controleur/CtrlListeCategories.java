@@ -9,10 +9,12 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import modele.CategorieSpectateur;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 
@@ -29,6 +31,15 @@ public class CtrlListeCategories {
 
     @FXML
     private TableView<CategorieSpectateur> tvListeCategorie;
+    
+    @FXML
+    private TableColumn<CategorieSpectateur,String> tabColNom;
+    
+    @FXML
+    private TableColumn<CategorieSpectateur,String> tabColDescription;
+    
+    @FXML
+    private TableColumn<CategorieSpectateur,Double> tabColTaux;
 
     static private ObservableList<CategorieSpectateur> 	lstCategorie = FXCollections.observableArrayList();
 
@@ -71,7 +82,10 @@ public class CtrlListeCategories {
     @FXML 
     void initialize() {
         lstCategorie.addAll(modele.CategorieSpectateur.getListDeBase());
-
+        
+        tabColNom.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("nom"));
+        tabColDescription.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("description"));
+        tabColTaux.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, Double>("reduction"));
         tvListeCategorie.setItems(lstCategorie);
 
         BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
