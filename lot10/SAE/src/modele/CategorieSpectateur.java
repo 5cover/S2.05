@@ -26,4 +26,17 @@ public final record CategorieSpectateur(
 	public static List<CategorieSpectateur> getListDeBase() {
 		return CATEGORIES_DE_BASE;
 	}
+	
+	public boolean equals(Object obj) {
+		boolean res = false;
+		if (obj instanceof CategorieSpectateur) {
+			CategorieSpectateur otherObj = (CategorieSpectateur)obj;
+			res = this.getNom() == otherObj.getNom();
+		}
+		return res;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
 }

@@ -101,5 +101,37 @@ public class Donnees {
 	
 	
 	
+	static public ObservableList<CategorieSpectateur> getlesCategorieSpectateur() {
+		return lesCategorieSpectateur;
+	}
+	
+	static public void ajouterCategorie(CategorieSpectateur catSpect) {
+		lesCategorieSpectateur.add(catSpect);
+	}
+	
+	static public void supprimerCategorie(CategorieSpectateur catSpect) {
+		boolean trouve = false;
+		int i=0;
+		while (!trouve && i<lesCategorieSpectateur.size()) {
+			if (lesCategorieSpectateur.get(i).equals(catSpect)){
+				lesCategorieSpectateur.remove(i);
+				trouve = true;
+			}
+			i++;
+		}
+	}
+	
+	static public void modifierCategorie(CategorieSpectateur catSpect) {
+		boolean trouve = false;
+		int i=0;
+		while (!trouve && i<lesCategorieSpectateur.size()) {
+			if (lesCategorieSpectateur.get(i).equals(catSpect)){
+				lesCategorieSpectateur.set(i, catSpect);
+				trouve = true;
+			}
+			i++;
+		}
+	}
+	
 
 }
