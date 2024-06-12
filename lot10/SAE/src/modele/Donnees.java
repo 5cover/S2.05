@@ -1,5 +1,8 @@
 package modele;
 
+import java.util.HashSet;
+import java.util.stream.Stream;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,7 +13,6 @@ public class Donnees {
 	static private ObservableList<Artiste> 					lesArtiste 	 = FXCollections.observableArrayList();
 	private static ObservableList<Spectacle> 				lesSpectacle = FXCollections.observableArrayList();
 	static private ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
-
 	
 	static { 
 		
@@ -31,7 +33,7 @@ public class Donnees {
 		lesCategorieSpectateur.add(new CategorieSpectateur("Sénior", "Perosnne de plus de 65 ans", .25));
 		lesCategorieSpectateur.add(new CategorieSpectateur("Abonné", "Personne qui assiste à au moins 3 spectacles par an", .3));
 		lesCategorieSpectateur.add(new CategorieSpectateur("Groupe", "Personne membre d'un groupe d'au moins 20 adultes", .15));
-		lesCategorieSpectateur.add(new CategorieSpectateur("Adulte", "Personne n'appartenant à aucune autre catégorie", 0));
+		lesCategorieSpectateur.add(new CategorieSpectateur("Adulte", "Personne n'appartenant à aucune autre catégorie", 0d));
 		
 //		lesArtiste ===============================================================================================================
 		lesArtiste.add(new Artiste("repar-auto"));
@@ -83,7 +85,9 @@ public class Donnees {
 		return lesRepresentattion;
 	}
 	
-	
+	public static HashSet<String> getGenres() {
+		return new HashSet<String>(lesSpectacle.stream().map((s) -> s.getGenre()).toList());
+	}
 	
 	
 	public static Zone getTarifsZoneBalcon() {

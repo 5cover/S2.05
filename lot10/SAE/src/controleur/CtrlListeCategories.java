@@ -6,6 +6,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
@@ -39,9 +41,9 @@ public class CtrlListeCategories {
     private TableColumn<CategorieSpectateur,String> tabColDescription;
     
     @FXML
-    private TableColumn<CategorieSpectateur,Double> tabColTaux;
+    private TableColumn<CategorieSpectateur,Number> tabColTaux;
 
-    static private ObservableList<CategorieSpectateur> 	lstCategorie = FXCollections.observableArrayList();
+    static private ObservableList<CategorieSpectateur> lstCategorie = FXCollections.observableArrayList();
 
     private MenuItem optionAjouter = new MenuItem("Ajouter...");
     private MenuItem optionModifier = new MenuItem("Modifier...");
@@ -81,11 +83,11 @@ public class CtrlListeCategories {
 
     @FXML 
     void initialize() {
-        lstCategorie.addAll(modele.CategorieSpectateur.getListDeBase());
+        lstCategorie.addAll(modele.CategorieSpectateur.CATEGORIES_DE_BASE);
         
-        tabColNom.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("nom"));
-        tabColDescription.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, String>("description"));
-        tabColTaux.setCellValueFactory(new PropertyValueFactory<CategorieSpectateur, Double>("reduction"));
+        tabColNom.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().nom()));
+        tabColDescription.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().description()));
+        tabColTaux.setCellValueFactory(p -> new SimpleDoubleProperty(p.getValue().reduction()));
         tvListeCategorie.setItems(lstCategorie);
 
         BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
