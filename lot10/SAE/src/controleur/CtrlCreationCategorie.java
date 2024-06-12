@@ -25,6 +25,8 @@ public class CtrlCreationCategorie {
 
     private CategorieSpectateur actuel;
     
+    private boolean modifier;
+    
     public CategorieSpectateur actuel() {
     	return actuel;
     }
@@ -42,10 +44,16 @@ public class CtrlCreationCategorie {
 			tfReduction.setText("");
 			tfNom.setText("");
 			taDescription.setText("");
+			tfNom.setEditable(true);
+			tfNom.setDisable(false);
+			modifier = false;
 		} else {			
 			tfReduction.setText(String.valueOf(categorie.reduction() * 100));
 			tfNom.setText(categorie.nom());
+			tfNom.setEditable(false);
+			tfNom.setDisable(true);
 			taDescription.setText(categorie.description());
+			modifier = true;
 		}
 	}
 	
@@ -55,6 +63,8 @@ public class CtrlCreationCategorie {
 				tfNom.getText(),
 				taDescription.getText(),
 				Double.parseDouble(tfReduction.getText()) / 100);
+		System.out.println(modifier);
+		Main.ajouterCategorie(actuel, modifier);
 		Main.fermerCreationCategorie();
 	}
 	

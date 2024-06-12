@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.CategorieSpectateur;
+import modele.Donnees;
 import vue.*;
 
 public final class Main extends Application {
@@ -42,6 +43,20 @@ public final class Main extends Application {
     	fCreationCategorie.afficher(actuel);
     	fCreationCategorie.showAndWait();
 		return fCreationCategorie.ctrl().actuel();
+    }
+    
+	public static void ajouterCategorie(CategorieSpectateur actuel, boolean modifier) {
+		if (modifier) {
+			// c'est une modification
+			Donnees.modifierCategorie(actuel);
+		} else {
+			// c'est un ajout
+			Donnees.ajouterCategorie(actuel);
+		}
+	}
+    
+    public static void supprimerCategorie(CategorieSpectateur actuel) {
+    	Donnees.supprimerCategorie(actuel);
     }
     
     public static void fermerCreationCategorie() {

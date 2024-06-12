@@ -11,9 +11,9 @@
    <center>
       <TableView fx:id="tvListeCategorie" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="118.4000244140625" text="Nom" />
-          <TableColumn prefWidth="304.79998779296875" text="Description" />
-            <TableColumn prefWidth="75.20001220703125" text="Taux" />
+          <TableColumn fx:id="tabColNom" prefWidth="118.4000244140625" text="Nom" />
+          <TableColumn fx:id="tabColDescription" prefWidth="304.79998779296875" text="Description" />
+            <TableColumn fx:id="tabColTaux" prefWidth="75.20001220703125" text="Taux" />
         </columns>
       </TableView>
    </center>
