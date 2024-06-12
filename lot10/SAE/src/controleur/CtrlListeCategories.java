@@ -91,6 +91,8 @@ public class CtrlListeCategories {
         BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
 		btnModifieCategorie.disableProperty().bind(rien);
 		btnSupprimerCategorie.disableProperty().bind(rien);
+		optionModifier.disableProperty().bind(rien);
+		optionSupprimer.disableProperty().bind(rien);
 		
 		tvListeCategorie.setContextMenu(menu);
 		optionAjouter.setOnAction(event -> {
