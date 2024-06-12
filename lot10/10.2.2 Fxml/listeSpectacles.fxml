@@ -34,22 +34,22 @@
       </ScrollPane>
       <VBox fillWidth="false" spacing="10.0" HBox.hgrow="NEVER">
          <children>
-            <TextField text="{NOM}" />
+            <TextField fx:id="txt_nomSpectacle" text="{NOM}" />
             <HBox alignment="CENTER_LEFT" spacing="6.0">
                <children>
                   <Label text="Capacité :" />
-                  <TextField editable="false" minWidth="30.0" prefWidth="50.0" text="120" />
+                  <TextField fx:id="txt_numSpectateur" editable="false" minWidth="30.0" prefWidth="50.0" />
                   <Label text="spectateurs" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" spacing="6.0">
                <children>
                   <Label text="Durée :" />
-                  <TextField editable="false" minWidth="50.0" prefWidth="60.0" text="1h54" />
+                  <TextField fx:id="txt_duree" editable="false" minWidth="50.0" prefWidth="60.0" />
                </children>
             </HBox>
-            <ComboBox maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Art contemporain" />
-            <ComboBox maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Catégorie A" />
+            <TextField fx:id="txt_categorieSpectacle" />
+            <TextField fx:id="txt_genreSpectacle" />
             <GridPane>
                <columnConstraints>
                   <ColumnConstraints hgrow="NEVER" />
@@ -68,7 +68,12 @@
                      </padding>
                      <children>
                         <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Loges gauches" />
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="num_prixLogesGauches" editable="false" maxWidth="-Infinity" prefWidth="100.0" />
+                              <Label prefHeight="25.0" text="€" />
+                           </children>
+                        </HBox>
                      </children>
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -80,7 +85,12 @@
                      </padding>
                      <children>
                         <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Balcon" />
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="num_prixBalcon" editable="false" maxWidth="-Infinity" prefWidth="100.0" />
+                              <Label prefHeight="25.0" text="€" />
+                           </children>
+                        </HBox>
                      </children>
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -92,7 +102,12 @@
                      </padding>
                      <children>
                         <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Orchestre" />
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="num_prixOrchestre" />
+                              <Label prefHeight="25.0" text="€" />
+                           </children>
+                        </HBox>
                      </children>
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -115,7 +130,12 @@
                      </padding>
                      <children>
                         <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Loges droites" />
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" text="5.70€" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="num_prixLogesDroites" editable="false" maxWidth="-Infinity" prefWidth="100.0" />
+                              <Label prefHeight="25.0" text="€" />
+                           </children>
+                        </HBox>
                      </children>
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
