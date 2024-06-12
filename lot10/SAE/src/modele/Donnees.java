@@ -12,7 +12,7 @@ public class Donnees {
 	static private ObservableList<Representation> 			lesRepresentattion = FXCollections.observableArrayList();
 
 	
-	static public void chargementDonnees() { 
+	static { 
 		
 		
 //		lesZones =================================================================================================================
