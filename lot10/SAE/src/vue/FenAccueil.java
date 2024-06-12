@@ -2,13 +2,14 @@ package vue;
 
 import java.io.IOException;
 
+import controleur.CtrlAccueil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class FenAccueil extends Stage {
-	private controleur.CtrlAccueil ctrl;
+	private CtrlAccueil ctrl;
 
 	public FenAccueil() throws IOException {
 		this.setTitle("Gestion Le Patio");
@@ -18,13 +19,13 @@ public class FenAccueil extends Stage {
 	}
 
 	
-	public controleur.CtrlAccueil ctrl() {
+	public CtrlAccueil ctrl() {
 		return ctrl;
 	}
 
 	private Pane creerSceneGraph() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/accueil.fxml"));
+		loader.setLocation(getClass().getResource("accueil.fxml"));
 		Pane root = loader.load();
 		ctrl = loader.getController();
 		return root;

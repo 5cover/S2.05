@@ -14,6 +14,33 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/vue/accueil.fxml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/10.2.2%20Fxml/accueil.fxml</locationURI>
+		</link>
+		<link>
+			<name>src/vue/creationCategorie.fxml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/10.2.2%20Fxml/creationCategorie.fxml</locationURI>
+		</link>
+		<link>
+			<name>src/vue/listeCategories.fxml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/10.2.2%20Fxml/listeCategories.fxml</locationURI>
+		</link>
+		<link>
+			<name>src/vue/listeSpectacles.fxml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/10.2.2%20Fxml/listeSpectacles.fxml</locationURI>
+		</link>
+		<link>
+			<name>src/vue/planning.fxml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/10.2.2%20Fxml/planning.fxml</locationURI>
+		</link>
+	</linkedResources>
 	<filteredResources>
 		<filter>
 			<id>1717592230202</id>

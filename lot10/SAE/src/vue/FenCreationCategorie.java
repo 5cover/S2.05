@@ -2,6 +2,7 @@ package vue;
 
 import java.io.IOException;
 
+import controleur.CtrlCreationCategorie;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -9,7 +10,7 @@ import javafx.stage.Stage;
 import modele.CategorieSpectateur;
 
 public class FenCreationCategorie extends Stage {
-	private controleur.CtrlCreationCategorie ctrl;
+	private CtrlCreationCategorie ctrl;
 
 	public FenCreationCategorie() throws IOException {
 		this.setTitle("Créer une catégorie");
@@ -22,13 +23,13 @@ public class FenCreationCategorie extends Stage {
 		ctrl.afficher(categorie);
 	}
 	
-	public controleur.CtrlCreationCategorie ctrl() {
+	public CtrlCreationCategorie ctrl() {
 		return ctrl;
 	}
 
 	private Pane creerSceneGraph() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/creationCategorie.fxml"));
+		loader.setLocation(getClass().getResource("creationCategorie.fxml"));
 		Pane root = loader.load();
 		ctrl = loader.getController();
 		return root;
