@@ -6,7 +6,7 @@ import java.util.HashMap;
 public final class Spectacle {
 	private String nom;
 	private int duree;
-	private int nbreMaxSpect;
+	private int capacite;
 	private String genre;
 	private ArrayList<Artiste> listeArtiste;
 	private HashMap<Zone, Float>  tarifs; // Hashmap qui lie pour une ou plusieures Zones un tarif pour cette instance
@@ -16,7 +16,7 @@ public final class Spectacle {
 	public Spectacle(String n, int d, int nb, String g, CategorieSpectacle cat) {
 		nom = n;
 		duree =d;
-		nbreMaxSpect = nb;
+		capacite = nb;
 		genre = g;
 		categorie = cat;
 
@@ -31,7 +31,7 @@ public final class Spectacle {
 	public void afficher(){
 		System.out.println("Nom spectacle : " + nom);
 		System.out.println("Durée : " + duree);
-		System.out.println("Nombre maximum de spectateurs : " + nbreMaxSpect);
+		System.out.println("Nombre maximum de spectateurs : " + capacite);
 		System.out.println("Genre du spectacle : " + genre);
 		System.out.println("Catégorie de spectacle : " + categorie);
 	}
@@ -182,8 +182,8 @@ public final class Spectacle {
 	public ArrayList<Artiste> getListeArtiste() {
 		return listeArtiste;
 	}
-	public int getNbreMaxSpect() {
-		return nbreMaxSpect;
+	public int getCapacite() {
+		return capacite;
 	}
 	public String getNom() {
 		return nom;
@@ -206,8 +206,8 @@ public final class Spectacle {
 	public void setListeArtiste(ArrayList<Artiste> listeArtiste) {
 		this.listeArtiste = listeArtiste;
 	}
-	public void setNbreMaxSpect(int nbreMaxSpect) {
-		this.nbreMaxSpect = nbreMaxSpect;
+	public void setCapacite(int nbreMaxSpect) {
+		this.capacite = nbreMaxSpect;
 	}
 	public void setNom(String nom) {
 		this.nom = nom;

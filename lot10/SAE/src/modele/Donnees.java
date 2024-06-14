@@ -1,5 +1,6 @@
 package modele;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 
 import javafx.collections.FXCollections;
@@ -51,14 +52,14 @@ public class Donnees {
 		lesSpectacle.add(new Spectacle("Roots", 3000, 50_000_000, "Groove Metal ",CategorieSpectacle.A ));
 		
 //		lesRepresentattion =======================================================================================================
-		lesRepresentattion.add(new Representation("16/06/2024", "08:00",lesSpectacle.get(0)));
-		lesRepresentattion.add(new Representation("23/06/2024", "08:00",lesSpectacle.get(0)));
-		lesRepresentattion.add(new Representation("30/06/2024", "08:00",lesSpectacle.get(0)));
-		lesRepresentattion.add(new Representation("14/07/2024", "22:30",lesSpectacle.get(1)));
-		lesRepresentattion.add(new Representation("25/06/2024", "05:00",lesSpectacle.get(2)));
-		lesRepresentattion.add(new Representation("01/01/2026", "00:01",lesSpectacle.get(3)));
-		lesRepresentattion.add(new Representation("12/06/2024", "12:30",lesSpectacle.get(4)));
-		lesRepresentattion.add(new Representation("27/03/2024", "15:15",lesSpectacle.get(5)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024, 6, 16, 8, 0),lesSpectacle.get(0)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024, 6, 23, 8, 0),lesSpectacle.get(0)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024,6,30,8,0),lesSpectacle.get(0)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024,7,14,22,30),lesSpectacle.get(1)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024,6,25,05,00),lesSpectacle.get(2)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2026,1,1,00,01),lesSpectacle.get(3)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024,6,12,12,30),lesSpectacle.get(4)));
+		lesRepresentattion.add(new Representation(LocalDateTime.of(2024,3,27,15,15),lesSpectacle.get(5)));
 		
 		
 		

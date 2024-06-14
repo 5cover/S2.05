@@ -1,20 +1,20 @@
 package modele;
 
+import java.time.LocalDateTime;
+
 public class Representation {
-    String jour;
-    String heure;
+    LocalDateTime dateHeure;
     boolean annulee;
     Spectacle represente;
 
-    public Representation(String j, String h, Spectacle r){
-        jour = j;
-        heure = h;
+    public Representation(LocalDateTime dateHeure, Spectacle r){
+        this.dateHeure = dateHeure;
         ajouterRepresente(r);
         annulee = false;
     }
 
     public void afficher(){
-        System.out.println("Date : " + jour + " Heure : " + heure);
+        System.out.println("Date/Heur : " + dateHeure);
         represente.afficher();
         System.out.println("Annulée ? " +annulee);
     }
@@ -47,23 +47,17 @@ public class Representation {
 
 
     // Getters and setters
-    public String getHeure() {
-        return heure;
+    public LocalDateTime getDateHeure() {
+        return dateHeure;
     }
-    public String getJour() {
-        return jour;
+    public void setDateHeure(LocalDateTime valeur) {
+        dateHeure = valeur;
     }
     public Spectacle getRepresente() {
         return represente;
     }
     public void setAnnulee(boolean annulee) {
         this.annulee = annulee;
-    }
-    public void setHeure(String heure) {
-        this.heure = heure;
-    }
-    public void setJour(String jour) {
-        this.jour = jour;
     }
     public void setRepresente(Spectacle represente) {
         this.represente = represente;

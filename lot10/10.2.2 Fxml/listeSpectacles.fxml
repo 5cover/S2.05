@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -17,11 +12,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.CtrlListeSpectacles">
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.CtrlListeSpectacles">
    <children>
       <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
          <content>
-            <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0">
+            <TableView fx:id="tvListeSpectacle" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0">
               <columns>
                 <TableColumn fx:id="txt_colonneNom" editable="false" text="Nom" />
                 <TableColumn fx:id="txt_colonneCategorie" editable="false" text="Catégorie" />
