@@ -9,7 +9,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import modele.Donnees;
 import modele.Spectacle;
 
-public class CtrlListeSpectacles {
+public class CtrlAfficheSpectacle {
 
     @FXML
     private TextField txt_numSpectateur;

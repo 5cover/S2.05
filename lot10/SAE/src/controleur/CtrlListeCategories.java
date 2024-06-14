@@ -1,13 +1,17 @@
 package controleur;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
@@ -15,12 +19,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import modele.CategorieSpectateur;
 import modele.Donnees;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 
 public class CtrlListeCategories {
+
+    static private ObservableList<CategorieSpectateur> lstCategorie = FXCollections.observableArrayList();
 
     @FXML
     private Button btnSupprimerCategorie;
@@ -33,32 +35,59 @@ public class CtrlListeCategories {
 
     @FXML
     private TableView<CategorieSpectateur> tvListeCategorie;
-    
-    @FXML
-    private TableColumn<CategorieSpectateur,String> tabColNom;
-    
-    @FXML
-    private TableColumn<CategorieSpectateur,String> tabColDescription;
-    
-    @FXML
-    private TableColumn<CategorieSpectateur,Number> tabColTaux;
 
-    static private ObservableList<CategorieSpectateur> lstCategorie = FXCollections.observableArrayList();
+    @FXML
+    private TableColumn<CategorieSpectateur, String> tabColNom;
 
-    private MenuItem optionAjouter = new MenuItem("Ajouter...");
-    private MenuItem optionModifier = new MenuItem("Modifier...");
-    private MenuItem optionSupprimer = new MenuItem("Supprimer");
-	
-    private ContextMenu menu = new ContextMenu( optionAjouter,
-    		 new SeparatorMenuItem(), 
-    		optionModifier,
-    		 new SeparatorMenuItem(),
-    		 optionSupprimer);
+    @FXML
+    private TableColumn<CategorieSpectateur, String> tabColDescription;
 
+    @FXML
+    private TableColumn<CategorieSpectateur, Number> tabColTaux;
+
+    private final MenuItem optionAjouter = new MenuItem("Ajouter...");
+    private final MenuItem optionModifier = new MenuItem("Modifier...");
+    private final MenuItem optionSupprimer = new MenuItem("Supprimer");
+
+    private final ContextMenu menu = new ContextMenu(optionAjouter, new SeparatorMenuItem(), optionModifier,
+            new SeparatorMenuItem(), optionSupprimer);
 
     @FXML
     void ajouterCategorie(ActionEvent event) {
         Main.afficherCreationCategorie(null);
+    }
+
+    @FXML
+    void initialize() {
+        lstCategorie.addAll(Donnees.getlesCategorieSpectateur());
+
+        tabColNom.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getNom()));
+        tabColDescription.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getDescription()));
+        tabColTaux.setCellValueFactory(p -> new SimpleDoubleProperty(p.getValue().getReduction()));
+        tvListeCategorie.setItems(lstCategorie);
+
+        BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
+        btnModifieCategorie.disableProperty().bind(rien);
+        btnSupprimerCategorie.disableProperty().bind(rien);
+        optionModifier.disableProperty().bind(rien);
+        optionSupprimer.disableProperty().bind(rien);
+
+        tvListeCategorie.setContextMenu(menu);
+        optionAjouter.setOnAction(event -> {
+            Main.afficherCreationCategorie(null);
+        });
+        optionModifier.setOnAction(event -> {
+            Main.afficherCreationCategorie(tvListeCategorie.getSelectionModel().getSelectedItem());
+        });
+        optionSupprimer.setOnAction(event -> {
+            Alert alert = new Alert(AlertType.CONFIRMATION, "Voulez-vous vraiment supprimer cette catégorie ?",
+                    ButtonType.YES, ButtonType.NO);
+            alert.setTitle("Confirmation de suppression");
+            alert.showAndWait();
+            if (alert.getResult() == ButtonType.YES) {
+                lstCategorie.remove(tvListeCategorie.getSelectionModel().getSelectedItem());
+            }
+        });
     }
 
     @FXML
@@ -68,53 +97,12 @@ public class CtrlListeCategories {
 
     @FXML
     void supprimerCategorie(ActionEvent event) {
-        Alert alert = new Alert(
-		    		AlertType.CONFIRMATION,
-		    		"Voulez-vous vraiment supprimer cette catégorie ?",
-		    		ButtonType.YES,
-		    		ButtonType.NO
-		    	);
-		    	alert.setTitle("Confirmation de suppression");
-		    	alert.showAndWait();
-                if (alert.getResult() == ButtonType.YES) {
-                	Main.supprimerCategorie(tvListeCategorie.getSelectionModel().getSelectedItem());
-		    	}
-    }
-
-    @FXML 
-    void initialize() {
-        lstCategorie.addAll(Donnees.getlesCategorieSpectateur());
-        
-        tabColNom.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getNom()));
-        tabColDescription.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getDescription()));
-        tabColTaux.setCellValueFactory(p -> new SimpleDoubleProperty(p.getValue().getReduction()));
-        tvListeCategorie.setItems(lstCategorie);
-
-        BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);
-		btnModifieCategorie.disableProperty().bind(rien);
-		btnSupprimerCategorie.disableProperty().bind(rien);
-		optionModifier.disableProperty().bind(rien);
-		optionSupprimer.disableProperty().bind(rien);
-		
-		tvListeCategorie.setContextMenu(menu);
-		optionAjouter.setOnAction(event -> {
-	        Main.afficherCreationCategorie(null);
-	    });
-	    optionModifier.setOnAction(event -> {
-	        Main.afficherCreationCategorie(tvListeCategorie.getSelectionModel().getSelectedItem());
-	    });
-	    optionSupprimer.setOnAction(event -> {
-	    	Alert alert = new Alert(
-		    		AlertType.CONFIRMATION,
-		    		"Voulez-vous vraiment supprimer cette catégorie ?",
-		    		ButtonType.YES,
-		    		ButtonType.NO
-		    	);
-		    	alert.setTitle("Confirmation de suppression");
-		    	alert.showAndWait();
-                if (alert.getResult() == ButtonType.YES) {
-                	lstCategorie.remove(tvListeCategorie.getSelectionModel().getSelectedItem());
-		    	}
-	    });
+        Alert alert = new Alert(AlertType.CONFIRMATION, "Voulez-vous vraiment supprimer cette catégorie ?",
+                ButtonType.YES, ButtonType.NO);
+        alert.setTitle("Confirmation de suppression");
+        alert.showAndWait();
+        if (alert.getResult() == ButtonType.YES) {
+            Main.supprimerCategorie(tvListeCategorie.getSelectionModel().getSelectedItem());
+        }
     }
 }

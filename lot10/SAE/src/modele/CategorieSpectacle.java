@@ -1,7 +1,5 @@
 package modele;
 
 public enum CategorieSpectacle {
-    A,
-    B,
-    C
+    A, B, C
 }

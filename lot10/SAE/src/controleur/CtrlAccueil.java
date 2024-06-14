@@ -7,8 +7,7 @@ public class CtrlAccueil {
 
     @FXML
     void quitter(ActionEvent event) {
-    	Main.quitter();
+        Main.quitter();
     }
 
 }
-
