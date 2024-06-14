@@ -3,6 +3,7 @@ package controleur;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import modele.CategorieSpectateur;
@@ -22,6 +23,9 @@ public class CtrlCreationCategorie {
 
     @FXML
     private TextArea taDescription;
+    
+    @FXML
+    private Label lErrorNumber;
 
     private CategorieSpectateur actuel;
 
@@ -56,7 +60,7 @@ public class CtrlCreationCategorie {
         Main.fermerCreationCategorie();
     }
 
-    private boolean estPourcentage(String s) {
+    private static boolean estPourcentage(String s) {
         try {
             double val = Double.parseDouble(s);
             return 0 <= val && val <= 100;
@@ -70,6 +74,7 @@ public class CtrlCreationCategorie {
                 .bind(tfNom.textProperty().isEmpty().or(taDescription.textProperty().isEmpty())
                         .or(Bindings.createBooleanBinding(() -> !estPourcentage(tfReduction.getText()),
                                 tfReduction.textProperty())));
+        lErrorNumber.visibleProperty().bind(tfReduction.textProperty().map((s) -> !estPourcentage(s)));
     }
 
     @FXML

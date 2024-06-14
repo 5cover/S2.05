@@ -7,17 +7,17 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.CategorieSpectateur;
 import modele.Donnees;
-import vue.FenAccueil;
-import vue.FenCreationCategorie;
+import vue.*;
 
 public final class Main extends Application {
     private static FenCreationCategorie fCreationCategorie;
     private static FenAccueil fAccueil;
+    private static FenAPropos fAPropos;
 
     /**
      * Créer une nouvelle catégorie avec la fenêtre modale de création de catégorie.
      * 
-     * @param la catégorie à modifier, ou null pour créer une nouvelle catégorie
+     * @param actuel la catégorie à modifier, ou null pour créer une nouvelle catégorie
      * @return Une nouvelle instance de la classe
      *         {@link modele.CategorieSpectateur}, ou la catégorie actuelle si
      *         l'utilisateur a annulé la création/modifcation.
@@ -53,6 +53,18 @@ public final class Main extends Application {
     public static void supprimerCategorie(CategorieSpectateur actuel) {
         Donnees.supprimerCategorie(actuel);
     }
+    
+    public static void afficherAPropos() {
+        fAPropos.show();
+    }
+    
+    public static void fermerAPropos() {
+        fAPropos.close();
+    }
+    
+    public static void actualiser() {
+    	controleur.CtrlListeSpectacles.actualiser();
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -60,10 +72,9 @@ public final class Main extends Application {
 
         fCreationCategorie = new FenCreationCategorie();
         fCreationCategorie.initModality(Modality.APPLICATION_MODAL);
-
-        // test
-        // System.out.println(afficherCreationCategorie(new
-        // CategorieSpectateur("Mafieux", "Les \"amis\" de Mr. Malraux", .99)));
+        actualiser();
+        
+        fAPropos = new FenAPropos();
 
         fAccueil.show();
 
