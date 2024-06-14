@@ -53,6 +53,10 @@ public final class Main extends Application {
     public static void supprimerCategorie(CategorieSpectateur actuel) {
         Donnees.supprimerCategorie(actuel);
     }
+    
+    public static void actualiser() {
+    	controleur.CtrlListeSpectacles.actualiser();
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -60,6 +64,10 @@ public final class Main extends Application {
 
         fCreationCategorie = new FenCreationCategorie();
         fCreationCategorie.initModality(Modality.APPLICATION_MODAL);
+        actualiser();
+        // test
+        // System.out.println(afficherCreationCategorie(new
+        // CategorieSpectateur("Mafieux", "Les \"amis\" de Mr. Malraux", .99)));
 
         fAccueil.show();
 
