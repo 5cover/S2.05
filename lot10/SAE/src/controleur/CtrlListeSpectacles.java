@@ -39,9 +39,9 @@ public class CtrlListeSpectacles {
     private static TableView<Spectacle> tvListeSpectacle = new TableView<Spectacle>();
 
     @FXML
-    private static TableColumn<Spectacle, Integer> txt_colonneDuree/* = new TableColumn<Spectacle, Integer>()*/;
+    private static TableColumn<Spectacle, Number> txt_colonneDuree/* = new TableColumn<Spectacle, Integer>()*/;
     @FXML
-    private static TableColumn<Spectacle, Integer> txt_colonneCapacite/* = new TableColumn<Spectacle, Integer>()*/;
+    private static TableColumn<Spectacle, Number> txt_colonneCapacite/* = new TableColumn<Spectacle, Integer>()*/;
     @FXML
     private static TableColumn<Spectacle, String> txt_colonneGenre/* = new TableColumn<Spectacle, String>()*/;
     @FXML
@@ -66,7 +66,6 @@ public class CtrlListeSpectacles {
 
     }
 
-    @FXML
     void initialize() {
 //        TableColumn<Spectacle, String> colonne1 = new TableColumn<>("Nom");
 //        colonne1.setCellValueFactory(new PropertyValueFactory<>("nom"));
