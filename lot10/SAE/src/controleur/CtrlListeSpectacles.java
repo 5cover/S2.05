@@ -1,5 +1,11 @@
 package controleur;
 
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.BooleanBinding;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
@@ -62,22 +68,28 @@ public class CtrlListeSpectacles {
 
     @FXML
     void initialize() {
-        TableColumn<Spectacle, String> colonne1 = new TableColumn<>("Nom");
-        colonne1.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        tvListeSpectacle.getColumns().set(0, colonne1);
-
-        TableColumn<Spectacle, String> colonne2 = new TableColumn<>("Categorie");
-        colonne2.setCellValueFactory(new PropertyValueFactory<>("categorie"));
-        tvListeSpectacle.getColumns().set(1, colonne2);
-        TableColumn<Spectacle, Integer> colonne3 = new TableColumn<>("Capacite");
-        colonne3.setCellValueFactory(new PropertyValueFactory<>("capacite"));
-        tvListeSpectacle.getColumns().set(2, colonne3);
-        TableColumn<Spectacle, Integer> colonne4 = new TableColumn<>("Duree");
-        colonne4.setCellValueFactory(new PropertyValueFactory<>("duree"));
-        tvListeSpectacle.getColumns().set(3, colonne4);
-        TableColumn<Spectacle, String> colonne5 = new TableColumn<>("Genre");
-        colonne5.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        tvListeSpectacle.getColumns().set(4, colonne5);
+//        TableColumn<Spectacle, String> colonne1 = new TableColumn<>("Nom");
+//        colonne1.setCellValueFactory(new PropertyValueFactory<>("nom"));
+//        tvListeSpectacle.getColumns().set(0, colonne1);
+        
+        txt_colonneNom.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getNom()));
+        txt_colonneCategorie.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getCategorie().toString()));
+        txt_colonneGenre.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getGenre()));
+        txt_colonneCapacite.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getCapacite()));
+        txt_colonneDuree.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getDuree()));
+        
+//        TableColumn<Spectacle, String> colonne2 = new TableColumn<>("Categorie");
+//        colonne2.setCellValueFactory(new PropertyValueFactory<>("categorie"));
+//        tvListeSpectacle.getColumns().set(1, colonne2);
+//        TableColumn<Spectacle, Integer> colonne3 = new TableColumn<>("Capacite");
+//        colonne3.setCellValueFactory(new PropertyValueFactory<>("capacite"));
+//        tvListeSpectacle.getColumns().set(2, colonne3);
+//        TableColumn<Spectacle, Integer> colonne4 = new TableColumn<>("Duree");
+//        colonne4.setCellValueFactory(new PropertyValueFactory<>("duree"));
+//        tvListeSpectacle.getColumns().set(3, colonne4);
+//        TableColumn<Spectacle, String> colonne5 = new TableColumn<>("Genre");
+//        colonne5.setCellValueFactory(new PropertyValueFactory<>("genre"));
+//        tvListeSpectacle.getColumns().set(4, colonne5);
 
         tvListeSpectacle.setItems(Donnees.getLesSpectacle());
         tvListeSpectacle.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
