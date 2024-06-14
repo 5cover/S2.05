@@ -54,6 +54,9 @@ public class CtrlListeSpectacles {
 //    Person person = taview.getSelectionModel().getSelectedItem();
     public static void actualiser() {
         spectSelected = tvListeSpectacle.getSelectionModel().getSelectedItem();
+        if (spectSelected == null) {
+            return;
+        }
         txt_numSpectateur.setText(Integer.toString(spectSelected.getCapacite()));
         num_prixOrchestre.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneDroite())));
         num_prixLogesDroites.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneOcherstre())));
