@@ -17,7 +17,7 @@ public final class Main extends Application {
     /**
      * Créer une nouvelle catégorie avec la fenêtre modale de création de catégorie.
      * 
-     * @param la catégorie à modifier, ou null pour créer une nouvelle catégorie
+     * @param actuel la catégorie à modifier, ou null pour créer une nouvelle catégorie
      * @return Une nouvelle instance de la classe
      *         {@link modele.CategorieSpectateur}, ou la catégorie actuelle si
      *         l'utilisateur a annulé la création/modifcation.
@@ -60,10 +60,6 @@ public final class Main extends Application {
 
         fCreationCategorie = new FenCreationCategorie();
         fCreationCategorie.initModality(Modality.APPLICATION_MODAL);
-
-        // test
-        // System.out.println(afficherCreationCategorie(new
-        // CategorieSpectateur("Mafieux", "Les \"amis\" de Mr. Malraux", .99)));
 
         fAccueil.show();
 
