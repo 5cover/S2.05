@@ -106,11 +106,6 @@ public class CtrlPlanning {
         tvRepresentations.setItems(representations);
 
         updateFilter();
-
-        dpDe.setOnAction(this::updateFilter);
-        dpA.setOnAction(this::updateFilter);
-        mbCategorie.setOnAction(this::updateFilter);
-        mbGenre.setOnAction(this::updateFilter);
     }
 
     private <T> CheckMenuItem newCheckedMenuItem(T content, BiConsumer<T, Boolean> onChecked) {
@@ -150,7 +145,7 @@ public class CtrlPlanning {
         representations.setPredicate(this::filter);
     }
 
-    private void updateFilter(ActionEvent e) {
+    @FXML private void updateFilter(ActionEvent e) {
         updateFilter();
     }
 }
