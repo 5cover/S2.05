@@ -12,41 +12,41 @@ import modele.Spectacle;
 public class CtrlListeSpectacles {
 
     @FXML
-    private TextField txt_numSpectateur;
+    private static  TextField txt_numSpectateur = new TextField() ;
     @FXML
-    private TextField num_prixOrchestre;
+    private static TextField num_prixOrchestre = new TextField();
     @FXML
-    private TextField num_prixLogesDroites;
+    private static TextField num_prixLogesDroites = new TextField();
     @FXML
-    private TextField txt_duree;
+    private static TextField txt_duree = new TextField();
     @FXML
-    private TextField num_prixLogesGauches;
+    private static TextField num_prixLogesGauches = new TextField();
     @FXML
-    private TextField num_prixBalcon;
+    private static TextField num_prixBalcon = new TextField();
     @FXML
-    private TextField txt_nomSpectacle;
+    private static TextField txt_nomSpectacle = new TextField();
     @FXML
-    private TextField txt_genreSpectacle;
+    private static TextField txt_genreSpectacle = new TextField();
     @FXML
-    private TextField txt_categorieSpectacle;
+    private static TextField txt_categorieSpectacle = new TextField();
     @FXML
-    private TableView<Spectacle> tvListeSpectacle;
+    private static TableView<Spectacle> tvListeSpectacle = new TableView<Spectacle>();
 
     @FXML
-    private TableColumn<Spectacle, Integer> txt_colonneDuree;
+    private static TableColumn<Spectacle, Integer> txt_colonneDuree/* = new TableColumn<Spectacle, Integer>()*/;
     @FXML
-    private TableColumn<Spectacle, Integer> txt_colonneCapacite;
+    private static TableColumn<Spectacle, Integer> txt_colonneCapacite/* = new TableColumn<Spectacle, Integer>()*/;
     @FXML
-    private TableColumn<Spectacle, String> txt_colonneGenre;
+    private static TableColumn<Spectacle, String> txt_colonneGenre/* = new TableColumn<Spectacle, String>()*/;
     @FXML
-    private TableColumn<Spectacle, String> txt_colonneCategorie;
+    private static TableColumn<Spectacle, String> txt_colonneCategorie/* = new TableColumn<Spectacle, String>()*/;
     @FXML
-    private TableColumn<Spectacle, String> txt_colonneNom;
+    private static TableColumn<Spectacle, String> txt_colonneNom/* = new TableColumn<Spectacle, String>()*/;
 
-    public Spectacle spectSelected;
+    public static Spectacle spectSelected;
 
 //    Person person = taview.getSelectionModel().getSelectedItem();
-    public void actualiser() {
+    public static void actualiser() {
         spectSelected = tvListeSpectacle.getSelectionModel().getSelectedItem();
         txt_numSpectateur.setText(Integer.toString(spectSelected.getCapacite()));
         num_prixOrchestre.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneDroite())));
@@ -81,7 +81,6 @@ public class CtrlListeSpectacles {
 
         tvListeSpectacle.setItems(Donnees.getLesSpectacle());
         tvListeSpectacle.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        // griser les boutons Modifier et Supprimer quand aucune s�lection
 
     }
 
