@@ -80,7 +80,7 @@ public final class Spectacle {
             z.putTarif(this, f);
         } else {
             if (z == null) {
-                throw new IllegalArgumentException("Zioe en entrée est null");
+                throw new IllegalArgumentException("Zone en entrée est null");
             } else {
                 throw new IllegalArgumentException("Zone est déja dans le HashMap");
             }
@@ -185,7 +185,7 @@ public final class Spectacle {
             z.removeTarif(this);
         } else {
             if (z == null) {
-                throw new IllegalArgumentException("Zioe en entrée est null");
+                throw new IllegalArgumentException("Zone en entrée est null");
             } else {
                 throw new IllegalArgumentException("Zone n'est pas dans le HashMap");
             }
