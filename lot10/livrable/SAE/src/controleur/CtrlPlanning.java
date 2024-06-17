@@ -69,10 +69,10 @@ public class CtrlPlanning {
     private final HashSet<String> filteredGenres = new HashSet<>();
 
     private boolean filter(Representation r) {
-        var date = r.getDateHeure().toLocalDate();
+        var date = getDate(r);
         var min = dpDe.getValue();
         var max = dpA.getValue();
-        return min != null && max != null && min.isBefore(date) && max.isAfter(date)
+        return min != null && max != null && min.compareTo(date) <= 0 && max.compareTo(date) >= 0
                 && (filteredCategories.isEmpty() || filteredCategories.contains(r.getRepresente().getCategorie()))
                 && (filteredGenres.isEmpty() || filteredGenres.contains(r.getRepresente().getGenre()));
     }
@@ -91,7 +91,7 @@ public class CtrlPlanning {
         lErreurDate.visibleProperty()
                 .bind(Bindings.createBooleanBinding(
                         () -> dpA.getValue() != null && dpDe.getValue() != null
-                                && dpA.getValue().compareTo(dpDe.getValue()) < 0,
+                                && dpA.getValue().isBefore(dpDe.getValue()),
                         dpA.valueProperty(), dpDe.valueProperty()));
 
         tcDuree.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getRepresente().getDuree() + " min"));

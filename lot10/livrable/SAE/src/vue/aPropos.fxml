@@ -15,11 +15,11 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Réalisé par Marius Chartier--Le Goff, Paolo Kervadec, Mattéo Toé, Raphael Bardini" wrappingWidth="240.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Réalisé par Marius Chartier--Le Goff, Paolo Toé, Mattéo Kervadec, Raphael Bardini" wrappingWidth="240.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="S2.01 - BUT Informatique - IUT de Lannion" textAlignment="RIGHT" wrappingWidth="240.0" />
       <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="SOMETIMES">
          <children>
-            <Button cancelButton="true" mnemonicParsing="false" onAction="#fermer" text="Fermer" />
+            <Button cancelButton="true" mnemonicParsing="false" prefHeight="20.0" prefWidth="90.0" onAction="#fermer" text="Fermer" />
          </children>
       </HBox>
    </children>

@@ -20,7 +20,7 @@
    <bottom>
       <HBox alignment="BOTTOM_RIGHT" spacing="15.0">
          <children>
-            <Button fx:id="btnAjoutCategorie" mnemonicParsing="false" onAction="#ajouterCategorie" prefWidth="90.0" text="Ajouter" />
+            <Button fx:id="btnAjoutCategorie" mnemonicParsing="false" onAction="#ajouterCategorie" prefHeight="20.0" prefWidth="90.0" text="Ajouter" />
             <Button fx:id="btnModifieCategorie" mnemonicParsing="false" onAction="#modifierCategorie" prefHeight="20.0" prefWidth="90.0" text="Modifier" />
             <Button fx:id="btnSupprimerCategorie" mnemonicParsing="false" onAction="#supprimerCategorie" prefHeight="20.0" prefWidth="90.0" text="Supprimer" />
          </children>

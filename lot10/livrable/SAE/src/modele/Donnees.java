@@ -47,10 +47,10 @@ public class Donnees {
 
 //		lesSpectacle =============================================================================================================
         lesSpectacle.add(new Spectacle("e", 120, 2_000, "chant grégorien", CategorieSpectacle.B));
-        lesSpectacle.get(0).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
-        lesSpectacle.get(0).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
-        lesSpectacle.get(0).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
-        lesSpectacle.get(0).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
+        lesSpectacle.get(0).ajouterTarif(getTarifsZoneBalcon(), (float) 9999.0);
+        lesSpectacle.get(0).ajouterTarif(getTarifsZoneDroite(), (float) 509999.0);
+        lesSpectacle.get(0).ajouterTarif(getTarifsZoneGauche(), (float) 59990.0);
+        lesSpectacle.get(0).ajouterTarif(getTarifsZoneOcherstre(), (float) 9999.0);
 
         lesSpectacle.add(new Spectacle("Les empereurs du néant", 666, 666, "Metal gothique", CategorieSpectacle.A));
         lesSpectacle.get(1).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
@@ -81,6 +81,12 @@ public class Donnees {
         lesSpectacle.get(5).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(5).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(5).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
+        
+        lesSpectacle.add(new Spectacle("1976 Jerry Lewis Telethon", 122, 800, "Classic americana", CategorieSpectacle.A));
+        lesSpectacle.get(6).ajouterTarif(getTarifsZoneBalcon(), (float) 38.99);
+        lesSpectacle.get(6).ajouterTarif(getTarifsZoneDroite(), (float) 18.99);
+        lesSpectacle.get(6).ajouterTarif(getTarifsZoneGauche(), (float) 18.99);
+        lesSpectacle.get(6).ajouterTarif(getTarifsZoneOcherstre(), (float) 34.99);
 
 //		lesRepresentattion =======================================================================================================
         lesRepresentattion.add(new Representation(LocalDateTime.of(2024, 6, 16, 8, 0), lesSpectacle.get(0)));
@@ -91,6 +97,8 @@ public class Donnees {
         lesRepresentattion.add(new Representation(LocalDateTime.of(2026, 1, 1, 00, 01), lesSpectacle.get(3)));
         lesRepresentattion.add(new Representation(LocalDateTime.of(2024, 6, 12, 12, 30), lesSpectacle.get(4)));
         lesRepresentattion.add(new Representation(LocalDateTime.of(2024, 3, 27, 15, 15), lesSpectacle.get(5)));
+        
+        lesRepresentattion.add(new Representation(LocalDateTime.of(1976, 4, 28, 19, 45), lesSpectacle.get(6)));
 
     }
 
