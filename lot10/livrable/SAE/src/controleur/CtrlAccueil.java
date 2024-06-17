@@ -9,7 +9,7 @@ public class CtrlAccueil {
     void quitter(ActionEvent event) {
         Main.quitter();
     }
-    
+
     @FXML
     void aPropos(ActionEvent event) {
         Main.afficherAPropos();

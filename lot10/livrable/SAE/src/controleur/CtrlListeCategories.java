@@ -1,8 +1,9 @@
 package controleur;
 
+import java.text.NumberFormat;
+
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +18,6 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import java.text.NumberFormat;
 import modele.CategorieSpectateur;
 import modele.Donnees;
 
@@ -29,7 +29,7 @@ public class CtrlListeCategories {
     static {
         percentageFormat.setMinimumFractionDigits(2);
     }
-    
+
     @FXML
     private Button btnSupprimerCategorie;
 
@@ -72,7 +72,8 @@ public class CtrlListeCategories {
 
         tabColNom.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getNom()));
         tabColDescription.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getDescription()));
-        tabColTaux.setCellValueFactory(p -> new SimpleStringProperty(percentageFormat.format(p.getValue().getReduction())));
+        tabColTaux.setCellValueFactory(
+                p -> new SimpleStringProperty(percentageFormat.format(p.getValue().getReduction())));
         tvListeCategorie.setItems(lstCategorie);
 
         BooleanBinding rien = Bindings.equal(tvListeCategorie.getSelectionModel().selectedIndexProperty(), -1);

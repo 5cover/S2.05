@@ -25,7 +25,7 @@ public class FenCreationCategorie extends Stage {
 
     private Pane creerSceneGraph() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/creationCategorie.fxml"));
+        loader.setLocation(getClass().getResource("creationCategorie.fxml"));
         Pane root = loader.load();
         ctrl = loader.getController();
         return root;

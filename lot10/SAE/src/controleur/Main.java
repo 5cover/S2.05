@@ -65,9 +65,7 @@ public final class Main extends Application {
         fAPropos.close();
     }
 
-    public static void actualiser() {
-        // controleur.CtrlListeSpectacles.actualiser();
-    }
+ 
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -76,7 +74,7 @@ public final class Main extends Application {
 
         fCreationCategorie = new FenCreationCategorie();
         fCreationCategorie.initModality(Modality.APPLICATION_MODAL);
-        actualiser();
+        
 
         fAPropos = new FenAPropos();
 

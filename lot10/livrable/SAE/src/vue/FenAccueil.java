@@ -20,7 +20,7 @@ public class FenAccueil extends Stage {
 
     private Pane creerSceneGraph() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/accueil.fxml"));
+        loader.setLocation(getClass().getResource("accueil.fxml"));
         Pane root = loader.load();
         ctrl = loader.getController();
         return root;

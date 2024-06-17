@@ -22,20 +22,20 @@
             <TableColumn fx:id="txt_colonneGenre" editable="false" text="Genre" />
         </columns>
       </TableView>
-      <VBox fillWidth="false" spacing="10.0" HBox.hgrow="NEVER">
+      <VBox spacing="10.0" HBox.hgrow="NEVER">
          <children>
             <TextField fx:id="txt_nomSpectacle" text="{NOM}" />
             <HBox alignment="CENTER_LEFT" spacing="6.0">
                <children>
                   <Label text="Capacité :" />
-                  <TextField fx:id="txt_numSpectateur" editable="false" minWidth="30.0" prefWidth="50.0" />
+                  <TextField fx:id="txt_numSpectateur" editable="false" minWidth="30.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
                   <Label text="spectateurs" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" spacing="6.0">
                <children>
                   <Label text="Durée :" />
-                  <TextField fx:id="txt_duree" editable="false" minWidth="50.0" prefWidth="60.0" />
+                  <TextField fx:id="txt_duree" editable="false" minWidth="50.0" prefWidth="60.0" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <TextField fx:id="txt_categorieSpectacle" />

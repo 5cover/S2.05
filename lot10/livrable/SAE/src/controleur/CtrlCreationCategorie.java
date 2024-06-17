@@ -23,7 +23,7 @@ public class CtrlCreationCategorie {
 
     @FXML
     private TextArea taDescription;
-    
+
     @FXML
     private Label lErrorNumber;
 

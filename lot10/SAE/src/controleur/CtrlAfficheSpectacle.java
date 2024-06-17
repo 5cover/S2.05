@@ -45,20 +45,6 @@ public class CtrlAfficheSpectacle {
 
     public Spectacle spectSelected;
 
-//    Person person = taview.getSelectionModel().getSelectedItem();
-    public void actualiser() {
-        spectSelected = tvListeSpectacle.getSelectionModel().getSelectedItem();
-        txt_numSpectateur.setText(Integer.toString(spectSelected.getCapacite()));
-        num_prixOrchestre.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneDroite())));
-        num_prixLogesDroites.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneOcherstre())));
-        txt_duree.setText(Integer.toString(spectSelected.getDuree()));
-        num_prixLogesGauches.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneGauche())));
-        num_prixBalcon.setText(Float.toString(spectSelected.tarifZone(Donnees.getTarifsZoneBalcon())));
-        txt_nomSpectacle.setText(spectSelected.getNom());
-        txt_genreSpectacle.setText(spectSelected.getGenre());
-        txt_categorieSpectacle.setText(spectSelected.getCategorie().toString());
-
-    }
 
     @FXML
     void initialize() {

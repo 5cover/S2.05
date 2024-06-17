@@ -10,7 +10,7 @@ public final class Spectacle {
     private String genre;
     private ArrayList<Artiste> listeArtiste;
     private HashMap<Zone, Float> tarifs; // Hashmap qui lie pour une ou plusieures Zones un tarif pour cette
-                                               // instance
+                                         // instance
     private CategorieSpectacle categorie;
     private final ArrayList<Representation> listeRepresentations;
 

@@ -64,17 +64,17 @@ public class CtrlPlanning {
     private MenuButton mbGenre;
 
     private final FilteredList<Representation> representations = new FilteredList<>(Donnees.getLesRepresentattion());
-    private final HashSet<CategorieSpectacle> allowedCategories = new HashSet<>();
+    private final HashSet<CategorieSpectacle> filteredCategories = new HashSet<>();
 
-    private final HashSet<String> allowedGenres = new HashSet<>();
+    private final HashSet<String> filteredGenres = new HashSet<>();
 
     private boolean filter(Representation r) {
         var date = r.getDateHeure().toLocalDate();
         var min = dpDe.getValue();
         var max = dpA.getValue();
         return min != null && max != null && min.isBefore(date) && max.isAfter(date)
-                && allowedCategories.contains(r.getRepresente().getCategorie())
-                && allowedGenres.contains(r.getRepresente().getGenre());
+                && (filteredCategories.isEmpty() || filteredCategories.contains(r.getRepresente().getCategorie()))
+                && (filteredGenres.isEmpty() || filteredGenres.contains(r.getRepresente().getGenre()));
     }
 
     public void initialize() {
@@ -110,17 +110,15 @@ public class CtrlPlanning {
 
     private <T> CheckMenuItem newCheckedMenuItem(T content, BiConsumer<T, Boolean> onChecked) {
         var item = new CheckMenuItem(content.toString());
-        item.setSelected(true);
-        onChecked.accept(content, true);
         item.setOnAction((e) -> onChecked.accept(content, item.isSelected()));
         return item;
     }
 
     private void onMbCategorieChecked(CategorieSpectacle cat, Boolean checked) {
         if (checked) {
-            allowedCategories.add(cat);
+            filteredCategories.add(cat);
         } else {
-            allowedCategories.remove(cat);
+            filteredCategories.remove(cat);
         }
 
         updateFilter();
@@ -128,9 +126,9 @@ public class CtrlPlanning {
 
     private void onMbGenreChecked(String genre, Boolean checked) {
         if (checked) {
-            allowedGenres.add(genre);
+            filteredGenres.add(genre);
         } else {
-            allowedGenres.remove(genre);
+            filteredGenres.remove(genre);
         }
 
         updateFilter();
