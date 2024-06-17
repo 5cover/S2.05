@@ -51,31 +51,31 @@ public class Donnees {
         lesSpectacle.get(0).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(0).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(0).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
-        
+
         lesSpectacle.add(new Spectacle("Les empereurs du néant", 666, 666, "Metal gothique", CategorieSpectacle.A));
         lesSpectacle.get(1).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
         lesSpectacle.get(1).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(1).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(1).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
-        
+
         lesSpectacle.add(new Spectacle("Les petits poisons dans l'eau", 20, 10000, "jazz", CategorieSpectacle.C));
         lesSpectacle.get(2).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
         lesSpectacle.get(2).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(2).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(2).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
-        
+
         lesSpectacle.add(new Spectacle("Les petits cailloux", 3, 8_000_000, "révélation", CategorieSpectacle.A));
         lesSpectacle.get(3).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
         lesSpectacle.get(3).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(3).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(3).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
-        
+
         lesSpectacle.add(new Spectacle("Moi lolita", 140, 20_400, "rap", CategorieSpectacle.A));
         lesSpectacle.get(4).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
         lesSpectacle.get(4).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);
         lesSpectacle.get(4).ajouterTarif(getTarifsZoneGauche(), (float) 50.0);
         lesSpectacle.get(4).ajouterTarif(getTarifsZoneOcherstre(), (float) 50.0);
-        
+
         lesSpectacle.add(new Spectacle("Roots", 3000, 50_000_000, "Groove Metal ", CategorieSpectacle.A));
         lesSpectacle.get(5).ajouterTarif(getTarifsZoneBalcon(), (float) 50.0);
         lesSpectacle.get(5).ajouterTarif(getTarifsZoneDroite(), (float) 50.0);

@@ -2,14 +2,12 @@ package vue;
 
 import java.io.IOException;
 
-import controleur.CtrlAccueil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class FenAPropos extends Stage {
-   
 
     public FenAPropos() throws IOException {
         this.setTitle("À propos");

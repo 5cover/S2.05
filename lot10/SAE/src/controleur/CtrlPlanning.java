@@ -145,7 +145,8 @@ public class CtrlPlanning {
         representations.setPredicate(this::filter);
     }
 
-    @FXML private void updateFilter(ActionEvent e) {
+    @FXML
+    private void updateFilter(ActionEvent e) {
         updateFilter();
     }
 }

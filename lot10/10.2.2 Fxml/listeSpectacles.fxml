@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -14,19 +13,15 @@
 
 <HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.CtrlListeSpectacles">
    <children>
-      <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
-         <content>
-            <TableView fx:id="tvListeSpectacle" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0">
-              <columns>
-                <TableColumn fx:id="txt_colonneNom" editable="false" text="Nom" />
-                <TableColumn fx:id="txt_colonneCategorie" editable="false" text="Catégorie" />
-                  <TableColumn fx:id="txt_colonneCapacite" editable="false" text="Capacité" />
-                  <TableColumn fx:id="txt_colonneDuree" editable="false" text="Durée" />
-                  <TableColumn fx:id="txt_colonneGenre" editable="false" text="Genre" />
-              </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
+      <TableView fx:id="tvListeSpectacle" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0" HBox.hgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="txt_colonneNom" editable="false" text="Nom" />
+          <TableColumn fx:id="txt_colonneCategorie" editable="false" text="Catégorie" />
+            <TableColumn fx:id="txt_colonneCapacite" editable="false" text="Capacité" />
+            <TableColumn fx:id="txt_colonneDuree" editable="false" text="Durée" />
+            <TableColumn fx:id="txt_colonneGenre" editable="false" text="Genre" />
+        </columns>
+      </TableView>
       <VBox fillWidth="false" spacing="10.0" HBox.hgrow="NEVER">
          <children>
             <TextField fx:id="txt_nomSpectacle" text="{NOM}" />

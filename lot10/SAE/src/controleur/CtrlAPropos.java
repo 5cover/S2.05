@@ -3,7 +3,8 @@ package controleur;
 import javafx.fxml.FXML;
 
 public class CtrlAPropos {
-    @FXML void fermer() {
+    @FXML
+    void fermer() {
         Main.fermerAPropos();
     }
 }
